@@ -193,6 +193,22 @@ def modify_pp3_value(content, section, key, value):
         
     return "\n".join(new_lines)
 
+
+def normalize_lcp_path(value):
+    if value is None:
+        return ""
+
+    text = str(value).strip()
+    if not text:
+        return ""
+
+    candidate = text.replace("file://", "").replace("file:", "", 1).strip()
+    if not candidate:
+        return ""
+
+    return str(Path(candidate).expanduser().resolve())
+
+
 def determine_lens_profile(lens_info):
     if not lens_info: return None
     li = lens_info.lower()
