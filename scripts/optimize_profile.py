@@ -1,5 +1,4 @@
 import sys
-import os
 from pathlib import Path
 
 from pdr_curve import pdr_delta_ev, interp_control_points, dr_headroom_ratio
@@ -168,7 +167,6 @@ def modify_pp3_value(content, section, key, value):
         stripped = line.strip()
         if stripped.startswith('[') and stripped.endswith(']'):
             current_section = stripped
-            is_target_section = (current_section.strip().casefold() == target_section)
         
         if current_section and current_section.strip().casefold() == target_section and stripped.startswith(key + "="):
             new_lines.append(f"{key}={value}")
@@ -202,19 +200,25 @@ def normalize_lcp_path(value):
     if not text:
         return ""
 
-    candidate = text
-    if "file:" in candidate:
-        candidate = candidate.rsplit("file:", 1)[1]
-    candidate = candidate.replace("file://", "").strip()
+    # RawTherapee and profile-generation code sometimes leaves a stale prefix
+    # before the actual file path, like:
+    #   "/Users/.../Raw/file:/Users/.../TTARTISAN.lcp"
+    # We must keep only the final absolute path and strip any file: URL prefix.
+    for marker in ("file://", "file:"):
+        if marker in text:
+            text = text.rsplit(marker, 1)[-1]
 
-    if not candidate:
+    text = text.strip().replace("\\", "/")
+    if not text:
         return ""
 
-    resolved = Path(candidate).expanduser().resolve()
-    return str(resolved)
+    return str(Path(text).expanduser().resolve(strict=False))
 
 
-def determine_lens_profile(lens_info, templates_dir=None):
+def determine_lens_profile(
+    lens_info: str | None,
+    templates_dir: Path | None = None,
+) -> Path | str | None:
     if not lens_info:
         return None
 
@@ -437,8 +441,10 @@ def optimize_pp3(base_pp3_path, output_pp3_path, params):
     selected_lens = determine_lens_profile(lens_model, templates_dir)
     if selected_lens:
         selected_lens_str = str(selected_lens)
-        if hasattr(selected_lens, "suffix") and selected_lens.suffix.lower() == ".lcp":
-            lcp_path = normalize_lcp_path(selected_lens.resolve())
+        selected_lens_path = Path(selected_lens)
+        if selected_lens_path.suffix.lower() == ".lcp":
+            lcp_path = normalize_lcp_path(selected_lens_path.resolve())
+            lcp_lens_name = lens_model or selected_lens_path.name
             content = modify_pp3_value(content, "[LensProfile]", "LcMode", "lcp")
             content = modify_pp3_value(content, "[LensProfile]", "LCPFile", lcp_path)
             content = modify_pp3_value(content, "[LensProfile]", "UseDistortion", "true")
@@ -446,8 +452,8 @@ def optimize_pp3(base_pp3_path, output_pp3_path, params):
             content = modify_pp3_value(content, "[LensProfile]", "UseCA", "true")
             content = modify_pp3_value(content, "[LensProfile]", "LFCameraMake", "Sony")
             content = modify_pp3_value(content, "[LensProfile]", "LFCameraModel", camera_model)
-            content = modify_pp3_value(content, "[LensProfile]", "LFLens", selected_lens.name)
-            applied["lens_profile_applied"] = selected_lens.name
+            content = modify_pp3_value(content, "[LensProfile]", "LFLens", lcp_lens_name)
+            applied["lens_profile_applied"] = selected_lens_path.name
             applied["lens_camera_model"] = camera_model
         else:
             content = modify_pp3_value(content, "[LensProfile]", "LcMode", "lfmanual")

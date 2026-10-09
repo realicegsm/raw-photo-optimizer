@@ -1,5 +1,4 @@
 import subprocess
-import json
 import sys
 import os
 import shutil
@@ -15,7 +14,7 @@ from optimize_profile import optimize_pp3, CONFIG
 from pdr_curve import dr_headroom_ratio, pdr_delta_ev
 
 # --- Default Configuration ---
-RAWTHERAPEE_BIN = "/usr/local/bin/rawtherapee-cli"
+RAWTHERAPEE_BIN = os.environ.get("RAWTHERAPEE_BIN", "/usr/local/bin/rawtherapee-cli")
 DEFAULT_RAW_DIR = "/Users/realice/Documents/Raw"
 DEFAULT_OUTPUT_DIR = "/Users/realice/Documents/Raw/Processed"
 #BASE_PROFILE_NAME = "OpenClaw_Base.pp3"
@@ -49,8 +48,6 @@ def optimize_profile(file_path, file_id, analysis_stats, camera_model, lens_mode
     dr_ev = analysis_stats.get("dynamic_range_ev")
     mean_green = analysis_stats.get("mean_green")
     estimated_shift_ev = analysis_stats.get("estimated_shift_ev")
-    p_low = analysis_stats.get("percentile_low_0_1")
-
     comp = "0.0"
     drc = "0"
     decision_values = {
@@ -236,7 +233,7 @@ def process_raw(file_path, output_dir, keep=False):
     file_id = Path(file_path).stem
     print(f"📸 Processing {file_id}...")
     
-    report = {
+    report: dict[str, object] = {
         "timestamp": datetime.now().isoformat(timespec="seconds"),
         "file": str(file_path),
         "file_id": file_id,
