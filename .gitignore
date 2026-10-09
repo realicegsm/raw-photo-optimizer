@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.log
+/test-output/
+/release/*.zip
+/release/**/.DS_Store

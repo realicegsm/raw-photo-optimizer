@@ -1,0 +1,1513 @@
+<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.3-c007 1.136881, 2010/06/10-18:11:35        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/"
+            xmlns:stCamera="http://ns.adobe.com/photoshop/1.0/camera-profile">
+         <photoshop:CameraProfiles>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>1.695994</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>6.154952</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.340007</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.340007</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.116545</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.313958</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000100</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000049</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.340833</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.340833</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.116305</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.311643</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000093</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000043</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000272</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.340833</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.340833</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.001536</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.004907</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000096</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000042</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>0.999661</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.340833</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.340833</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.002023</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.000977</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000097</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000045</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.340007</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.340007</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>-7.122738</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>25.283360</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>-29.405773</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.004808</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>2.970854</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>6.248629</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.361875</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.361875</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.110953</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.319655</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000098</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000045</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.360358</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.360358</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.110945</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.315877</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000095</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000040</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000275</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.360358</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.360358</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.001412</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.004185</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000092</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000038</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>0.999820</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.360358</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.360358</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.001172</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.001828</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000099</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000043</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.361875</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.361875</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>-3.336374</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>3.410453</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>0.000000</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.006424</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>4.000000</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>6.338843</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.380214</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.380214</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.101624</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.320317</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000098</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000044</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.378408</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.378408</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.102207</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.317780</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000096</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000041</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000192</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.378408</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.378408</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.000057</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>-0.000459</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000093</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000039</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>0.999908</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.378408</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.378408</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.000802</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.003706</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000099</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000043</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.380214</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.380214</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>1.358804</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>-27.858084</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>55.602177</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.005563</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>4.970854</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>6.332797</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.379540</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.379540</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.104752</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.337909</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000094</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000043</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.377080</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.377080</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.105761</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.334678</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000092</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000040</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000137</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.377080</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.377080</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.000004</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.002241</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000087</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000038</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>0.999953</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.377080</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.377080</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.000616</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.004080</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000097</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000043</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.379540</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.379540</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>-3.505059</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>44.339184</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>-187.005905</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.001201</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>6.000000</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>6.308110</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.374225</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.374225</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.110224</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.359323</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000095</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000045</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.375836</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.375836</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.110180</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.359549</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000092</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000042</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000144</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.375836</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.375836</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.000441</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.004666</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000091</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000041</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>0.999972</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.375836</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.375836</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.000766</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.002635</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000098</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000046</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.374225</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.374225</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>-1.952930</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>11.118081</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>0.000000</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.001446</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>6.918863</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>6.402299</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.393413</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.393413</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.103282</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.360253</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000092</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000042</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.393622</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.393622</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.103317</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.358382</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000089</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000039</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000149</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.393622</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.393622</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.000729</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.006610</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000089</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000037</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>0.999952</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.393622</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.393622</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.001233</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.001297</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000094</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000042</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.393413</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.393413</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>0.344166</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>0.000000</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>0.000000</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.001940</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>8.000000</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>6.276413</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.366909</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.366909</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.114243</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.364109</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000095</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000044</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.366307</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.366307</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.114327</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.360675</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000093</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000042</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000145</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.366307</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.366307</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.000551</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.005136</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000090</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000040</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000005</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.366307</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.366307</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.000414</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.004355</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000098</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000045</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.366909</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.366909</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>0.336588</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>0.000000</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>0.000000</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.003513</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>1.695994</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>2.977056</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.407282</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.407282</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.084804</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.343378</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000149</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000080</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.407698</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.407698</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.085252</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.342226</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000145</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000077</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000250</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.407698</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.407698</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.001926</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.008668</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000146</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000076</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>0.999657</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.407698</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.407698</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.003472</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>-0.006154</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000150</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000078</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.407282</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.407282</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>-8.692227</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>50.329964</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>-144.984467</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.017097</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>2.970854</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>2.985925</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.413154</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.413154</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.087684</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.349753</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000144</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000075</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.413298</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.413298</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.088021</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.349225</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000141</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000074</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000206</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.413298</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.413298</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.000466</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>-0.000579</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000143</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000072</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>0.999842</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.413298</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.413298</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.001541</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.001697</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000146</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000075</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.413154</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.413154</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>0.847433</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>-52.896626</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>206.020157</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.003382</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>4.000000</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>2.969009</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.405794</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.405794</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.085220</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.357681</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000143</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000075</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.405093</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.405093</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.086011</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.357776</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000142</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000075</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000119</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.405093</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.405093</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.000691</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>-0.003831</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000139</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000073</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>0.999935</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.405093</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.405093</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.001472</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.001486</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000145</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000076</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.405794</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.405794</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>-1.781347</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>26.205732</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>-161.115707</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.001726</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>4.970854</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>3.012836</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.427559</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.427559</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.088003</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.403902</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000139</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000073</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.427898</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.427898</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.088468</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.403691</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000138</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000072</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000114</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.427898</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.427898</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.000092</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.000740</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000135</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000071</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>0.999976</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.427898</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.427898</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.001532</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.000427</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000143</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000073</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.427559</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.427559</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>-1.173692</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>6.766652</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>0.000000</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.002115</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>6.000000</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>2.998446</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.422119</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.422119</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.093279</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.429669</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000140</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000075</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.422068</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.422068</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.093753</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.429132</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000140</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000074</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000115</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.422068</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.422068</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.000004</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.000935</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000137</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000072</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>0.999982</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.422068</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.422068</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.001834</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>-0.001174</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000142</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000076</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.422119</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.422119</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>-1.066486</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>5.838755</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>0.000000</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.001885</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>6.918863</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>3.001283</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.423055</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.423055</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.090269</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.412060</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000142</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000073</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.422644</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.422644</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.090711</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.410531</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000142</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000072</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000098</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.422644</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.422644</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.000035</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.000942</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000138</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000071</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000010</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.422644</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.422644</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.001031</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.003971</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000144</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000074</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.423055</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.423055</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>-1.103660</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>6.217013</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>0.000000</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.001862</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>8.000000</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>3.001518</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.420957</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.420957</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.089730</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.405645</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000146</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000076</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.420824</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.420824</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.090208</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.404756</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000146</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000076</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000097</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.420824</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.420824</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.000023</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.001806</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000143</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000074</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000007</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.420824</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.420824</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.001269</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.002311</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000149</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000078</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.420957</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.420957</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>-1.148955</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>6.438059</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>0.000000</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.002258</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>1.695994</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>0.798173</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.459435</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.459435</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.495389</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.485174</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>0.008276</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.470166</stCamera:RadialDistortParam2>
+                     <stCamera:RadialDistortParam3>0.124081</stCamera:RadialDistortParam3>
+                     <stCamera:ResidualMeanError>0.000157</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000079</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.460568</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.460568</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.495299</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.485306</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.006168</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.500542</stCamera:RadialDistortParam2>
+                        <stCamera:RadialDistortParam3>-0.031851</stCamera:RadialDistortParam3>
+                        <stCamera:ResidualMeanError>0.000153</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000078</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000028</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.460568</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.460568</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.495299</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.485306</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.001072</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>-0.043575</stCamera:RadialDistortParam2>
+                        <stCamera:RadialDistortParam3>0.221853</stCamera:RadialDistortParam3>
+                        <stCamera:ResidualMeanError>0.000154</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000082</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>0.999861</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.460568</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.460568</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.495299</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.485306</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.007175</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>-0.051658</stCamera:RadialDistortParam2>
+                        <stCamera:RadialDistortParam3>0.229184</stCamera:RadialDistortParam3>
+                        <stCamera:ResidualMeanError>0.000153</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000079</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.459435</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.459435</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.495389</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.485174</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>-8.072215</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>37.496284</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>-73.448662</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.015926</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>2.970854</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>0.751201</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.365279</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.365279</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.016908</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.418482</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000164</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000080</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.366260</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.366260</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.016950</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.418091</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000161</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000079</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000059</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.366260</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.366260</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.001063</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>-0.000679</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000160</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000081</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000109</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.366260</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.366260</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.001923</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.004307</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000161</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000078</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.365279</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.365279</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>-0.045079</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>-24.144991</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>58.952469</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.002479</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>4.000000</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>0.759120</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.381893</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.381893</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.015887</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.476919</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000161</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000082</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.381824</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.381824</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.016404</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.475189</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000156</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000079</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>0.999993</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.381824</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.381824</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.000467</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>-0.001430</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000156</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000081</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000167</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.381824</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.381824</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.002047</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.005060</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000157</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000079</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.381893</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.381893</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>-1.795258</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>20.175806</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>-117.060600</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.001985</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>4.970854</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>0.761028</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.381803</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.381803</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.021871</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.515330</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000164</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000081</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.382655</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.382655</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.022068</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.514303</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000157</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000079</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>0.999987</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.382655</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.382655</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.000832</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.002041</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000157</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000079</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000194</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.382655</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.382655</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.002402</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.002774</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000159</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000079</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.381803</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.381803</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>-1.049503</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>-1.169570</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>39.582264</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.002587</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>6.000000</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>0.787144</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.430874</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.430874</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.495827</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.488064</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.017315</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.696643</stCamera:RadialDistortParam2>
+                     <stCamera:RadialDistortParam3>-0.414254</stCamera:RadialDistortParam3>
+                     <stCamera:ResidualMeanError>0.000170</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000098</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.431094</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.431094</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.495854</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.487992</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.018166</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.702137</stCamera:RadialDistortParam2>
+                        <stCamera:RadialDistortParam3>-0.458572</stCamera:RadialDistortParam3>
+                        <stCamera:ResidualMeanError>0.000167</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000096</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>0.999944</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.431094</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.431094</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.495854</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.487992</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.000846</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>-0.024106</stCamera:RadialDistortParam2>
+                        <stCamera:RadialDistortParam3>0.115457</stCamera:RadialDistortParam3>
+                        <stCamera:ResidualMeanError>0.000167</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000097</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000213</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.431094</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.431094</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.495854</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.487992</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.001728</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.015724</stCamera:RadialDistortParam2>
+                        <stCamera:RadialDistortParam3>-0.038381</stCamera:RadialDistortParam3>
+                        <stCamera:ResidualMeanError>0.000169</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000096</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.430874</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.430874</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.495827</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.488064</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>-1.168970</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>-0.049369</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>39.467693</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.002599</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>6.918863</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>0.757061</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.373370</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.373370</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.027284</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.556722</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000165</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000084</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.373688</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.373688</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.027256</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.553144</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000158</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000080</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>0.999967</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.373688</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.373688</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.000773</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.001483</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000158</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000081</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000225</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.373688</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.373688</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.001785</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.007852</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000160</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000081</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.373370</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.373370</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>-1.281953</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>5.270572</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>0.000000</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.002938</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stCamera:ProfileName>TTARTISAN AF 50mm F1.8 Neo</stCamera:ProfileName>
+                  <stCamera:Make>TTARTISAN</stCamera:Make>
+                  <stCamera:Model>TTARTISAN AF 50mm F1.8 Neo</stCamera:Model>
+                  <stCamera:UniqueCameraModel>TTARTISAN</stCamera:UniqueCameraModel>
+                  <stCamera:Lens>TTARTISAN AF 50mm F1.8 Neo</stCamera:Lens>
+                  <stCamera:LensInfo>500/10 500/10 18/10 18/10</stCamera:LensInfo>
+                  <stCamera:ImageWidth>4000.000000</stCamera:ImageWidth>
+                  <stCamera:ImageLength>2667.000000</stCamera:ImageLength>
+                  <stCamera:FocalLength>50.000000</stCamera:FocalLength>
+                  <stCamera:ApertureValue>8.000000</stCamera:ApertureValue>
+                  <stCamera:LensPrettyName>TTARTISAN AF 50mm F1.8 Neo</stCamera:LensPrettyName>
+                  <stCamera:CameraPrettyName>TTARTISAN</stCamera:CameraPrettyName>
+                  <stCamera:CameraRawProfile>True</stCamera:CameraRawProfile>
+                  <stCamera:FocusDistance>0.763613</stCamera:FocusDistance>
+                  <stCamera:SensorFormatFactor>1.000000</stCamera:SensorFormatFactor>
+                  <stCamera:PerspectiveModel rdf:parseType="Resource">
+                     <stCamera:Version>2</stCamera:Version>
+                     <stCamera:FocalLengthX>1.384266</stCamera:FocalLengthX>
+                     <stCamera:FocalLengthY>1.384266</stCamera:FocalLengthY>
+                     <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                     <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                     <stCamera:RadialDistortParam1>-0.025387</stCamera:RadialDistortParam1>
+                     <stCamera:RadialDistortParam2>0.551841</stCamera:RadialDistortParam2>
+                     <stCamera:ResidualMeanError>0.000169</stCamera:ResidualMeanError>
+                     <stCamera:ResidualStandardDeviation>0.000085</stCamera:ResidualStandardDeviation>
+                     <stCamera:ChromaticGreenModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.384519</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.384519</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.025681</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.549222</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000162</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000082</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticGreenModel>
+                     <stCamera:ChromaticRedGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>0.999960</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.384519</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.384519</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>-0.000686</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.001039</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000162</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000082</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticRedGreenModel>
+                     <stCamera:ChromaticBlueGreenModel rdf:parseType="Resource">
+                        <stCamera:ScaleFactor>1.000228</stCamera:ScaleFactor>
+                        <stCamera:FocalLengthX>1.384519</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.384519</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:RadialDistortParam1>0.001868</stCamera:RadialDistortParam1>
+                        <stCamera:RadialDistortParam2>0.007492</stCamera:RadialDistortParam2>
+                        <stCamera:ResidualMeanError>0.000162</stCamera:ResidualMeanError>
+                        <stCamera:ResidualStandardDeviation>0.000082</stCamera:ResidualStandardDeviation>
+                     </stCamera:ChromaticBlueGreenModel>
+                     <stCamera:VignetteModel rdf:parseType="Resource">
+                        <stCamera:FocalLengthX>1.384266</stCamera:FocalLengthX>
+                        <stCamera:FocalLengthY>1.384266</stCamera:FocalLengthY>
+                        <stCamera:ImageXCenter>0.500000</stCamera:ImageXCenter>
+                        <stCamera:ImageYCenter>0.499813</stCamera:ImageYCenter>
+                        <stCamera:VignetteModelParam1>-1.281650</stCamera:VignetteModelParam1>
+                        <stCamera:VignetteModelParam2>5.467906</stCamera:VignetteModelParam2>
+                        <stCamera:VignetteModelParam3>0.000000</stCamera:VignetteModelParam3>
+                        <stCamera:ResidualMeanError>0.002377</stCamera:ResidualMeanError>
+                     </stCamera:VignetteModel>
+                  </stCamera:PerspectiveModel>
+               </rdf:li>
+            </rdf:Seq>
+         </photoshop:CameraProfiles>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?>
