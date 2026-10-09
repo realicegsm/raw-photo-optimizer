@@ -1,30 +1,31 @@
 # raw-photo-optimizer
 
-Автоматизированный пайплайн для проявки RAW-снимков Sony A6100 (`.ARW`) через RawTherapee CLI с привязкой к реальной чувствительности сенсора и рассчитанными порогами PDR.
+Automated RAW development pipeline for Sony A6100 (`.ARW`) files rendered to JPEG through RawTherapee CLI, using real sensor behavior and measured PDR thresholds instead of fixed hardcoded assumptions.
 
-Проект сочетает:
+This project combines:
 
-- анализ линейных данных сенсора через `rawpy`
-- оценку экспозиции и динамического диапазона сцены
-- вычисление PDR-потолка сенсора по ISO
-- автоматическую генерацию индивидуального профиля `.pp3`
-- обработку пакета RAW-файлов с CSV-логом и сохранением профилей по необходимости
+- sensor-level RAW analysis through `rawpy`
+- scene exposure and dynamic-range estimation
+- ISO-aware PDR ceiling evaluation
+- per-file `.pp3` profile generation
+- batch RAW processing with CSV logging and optional profile retention
 
-## Что умеет проект
+## What the project does
 
-- анализировать EXIF: ISO, модель камеры, объектив
-- читать статистику сырых данных до тоновых кривых и WB
-- рассчитывать `mean_green`, `dynamic_range_ev`, `under_pct`, `over_pct`, `estimated_shift_ev`
-- подбирать параметры проявки на основе `headroom_ratio` и `pdr_delta_ev`
-- генерировать `.pp3`-профиль для каждого файла
-- запускать пакетную обработку через RawTherapee
-- сохранять CSV-отчёт по результатам съемки
+- reads EXIF data: ISO, camera model, lens model
+- analyzes raw sensor data before tone curves and WB are applied
+- calculates `mean_green`, `dynamic_range_ev`, `under_pct`, `over_pct`, and `estimated_shift_ev`
+- chooses development parameters based on `headroom_ratio` and `pdr_delta_ev`
+- generates a `.pp3` profile for each file
+- runs batch processing via RawTherapee
+- writes CSV reports with applied decisions and output paths
 
-## Архитектура проекта
+## Project structure
 
 ```text
 raw-photo-optimizer/
 ├── README.md
+├── README.ru.md
 ├── SKILL.md
 ├── .gitignore
 ├── .github/
@@ -32,8 +33,11 @@ raw-photo-optimizer/
 │       └── ci.yml
 ├── docs/
 │   ├── architecture.md
+│   ├── architecture.ru.md
 │   ├── calibration.md
-│   └── troubleshooting.md
+│   ├── calibration.ru.md
+│   ├── troubleshooting.md
+│   └── troubleshooting.ru.md
 ├── scripts/
 │   ├── analyze_raw.py
 │   ├── optimize_profile.py
@@ -72,81 +76,81 @@ raw-photo-optimizer/
 └── .
 ```
 
-## Принцип работы проекта
+## Development model
 
-Разработка и релиз организованы по одной модели:
+The project keeps a consistent layout for both development and release:
 
-- `scripts/` — рабочая разработка
-- `release/raw-photo-optimizer/` — чистый релизный bundle для skill-пакета
-- `templates/` — базовые профили и вспомогательные данные
-- `docs/` — описание методики, логики и эксплуатации
+- `scripts/` — active development logic
+- `release/raw-photo-optimizer/` — clean exportable skill bundle
+- `templates/` — base `.pp3` templates and camera profile assets
+- `docs/` — architecture, calibration, and troubleshooting guides
 
-То есть проект сохраняет рабочую среду разработки, но одновременно поддерживает минимальный экспортный пакет для публикации и использования как skill.
+This keeps the development workflow intact while also preserving a minimal exportable package for publication and agent use.
 
-## Требования
+## Requirements
 
-Перед запуском убедитесь, что установлены:
+Before running the pipeline, ensure the following are available:
 
 - Python 3.8+
 - `numpy`
 - `rawpy`
-- `exiftool` в `PATH`
+- `exiftool` in `PATH`
 - `rawtherapee-cli`
 
-Установка зависимостей:
+Install dependencies:
 
 ```bash
 pip install numpy rawpy
 ```
 
-## Использование
+## Usage
 
-Запуск полной обработки каталога RAW:
+Process a full RAW directory:
 
 ```bash
 python3 scripts/process_raw.py /path/to/raw /path/to/output
 ```
 
-С сохранением `.pp3` рядом с файлом и CSV-отчётом:
+Save the generated `.pp3` file and write a CSV report:
 
 ```bash
 python3 scripts/process_raw.py /path/to/raw /path/to/output --keep --log
 ```
 
-Для отдельного анализа одного файла:
+Analyze a single RAW file:
 
 ```bash
 python3 scripts/analyze_raw.py DSC01900.ARW
 ```
 
-## Основные модули
+## Core modules
 
-- `scripts/analyze_raw.py` — EXIF и анализ линейных данных сенсора
-- `scripts/pdr_curve.py` — кривая PDR и интерполяция по ISO
-- `scripts/optimize_profile.py` — генерация параметров `.pp3` и запись итоговых значений
-- `scripts/process_raw.py` — оркестратор пайплайна, пакетная обработка, логирование
+- `scripts/analyze_raw.py` — EXIF extraction and raw sensor analysis
+- `scripts/pdr_curve.py` — PDR curve and ISO interpolation logic
+- `scripts/optimize_profile.py` — profile generation and `.pp3` writing logic
+- `scripts/process_raw.py` — orchestration, batch rendering, CSV logging
 
-## Логика принятия решений
+## Decision logic
 
-Pipeline использует не “магические” фиксированные пороги, а измеряемые характеристики сенсора:
+The pipeline does not rely on magic fixed thresholds alone. It uses measured sensor characteristics:
 
-- `mean_green` — оценка общей экспозиции
-- `dynamic_range_ev` — динамический диапазон сцены
-- `headroom_ratio` — отношение DR сцены к потолку сенсора на текущем ISO
-- `pdr_delta_ev` — потеря PDR относительно базового ISO
+- `mean_green` — global scene exposure estimate
+- `dynamic_range_ev` — scene dynamic range
+- `headroom_ratio` — scene DR relative to the sensor ceiling at the current ISO
+- `pdr_delta_ev` — loss of PDR relative to base ISO
 
-На основе этих метрик выбираются:
+These values drive:
 
-- экспокоррекция
-- DRC Amount / Anchor / Contrast
-- Highlight Recovery
-- Shadow Lift
-- шумоподавление
-- коррекция объектива и CA
+- exposure compensation
+- DRC amount, anchor, and contrast
+- highlight recovery
+- shadow lift
+- denoising
+- lens correction and CA handling
 
-## Release structure
+## Release bundle
 
-Релизный bundle находится в:
+The release bundle is stored in:
 
 ```text
 release/raw-photo-optimizer/
@@ -161,15 +165,18 @@ release/raw-photo-optimizer/
     └── Sony ILCE-6100A Adobe Standard.dcp
 ```
 
-Эта структура предназначена для публикации skill-пакета без локальных мусорных файлов, временных выходов и артефактов разработки.
+This structure is intended for publishing the skill bundle without local debris, temporary outputs, or development artifacts.
 
-## Полезные ссылки
+## Documentation
 
 - [docs/architecture.md](docs/architecture.md)
 - [docs/calibration.md](docs/calibration.md)
 - [docs/troubleshooting.md](docs/troubleshooting.md)
-- [SKILL.md](SKILL.md)
+- [README.ru.md](README.ru.md)
+- [docs/architecture.ru.md](docs/architecture.ru.md)
+- [docs/calibration.ru.md](docs/calibration.ru.md)
+- [docs/troubleshooting.ru.md](docs/troubleshooting.ru.md)
 
-## Важно
+## Important note
 
-Проект рассчитан на работу с Sony A6100 и базовыми шаблонами RawTherapee, и предназначен как инструмент для автоматизированной, но контролируемой обработки RAW. Он сохраняет рабочую разработку и одновременно поддерживает экспортный skill-вид для публикации.
+The project is tuned for Sony A6100 and RawTherapee-based workflows. It is designed as a controlled but automated RAW processing pipeline, preserving the development workflow while also supporting an exportable skill package for publication.

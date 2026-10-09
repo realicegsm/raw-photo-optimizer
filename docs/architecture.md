@@ -1,89 +1,89 @@
-# Архитектура проекта
+# Project architecture
 
-## 1. Цель системы
+## 1. System goal
 
-Проект `raw-photo-optimizer` предназначен для пакетной обработки Sony RAW (`.ARW`) в JPEG через RawTherapee CLI с автоматическим подбором параметров проявки на основе данных сенсора, а не на основе фиксированных жестких порогов.
+The `raw-photo-optimizer` project is designed for batch processing of Sony RAW (`.ARW`) files into JPEG using RawTherapee CLI, with development parameters chosen from real sensor data rather than fixed hardcoded thresholds.
 
-Каждый кадр проходит цикл:
+Each frame follows this flow:
 
-1. извлечение EXIF
-2. анализ сырых данных сенсора
-3. вычисление динамического диапазона и экспозиции
-4. выбор параметров проявки
-5. генерация файла `.pp3`
-6. рендер через RawTherapee
-7. запись CSV-отчёта
+1. EXIF extraction
+2. raw sensor analysis
+3. dynamic range and exposure estimation
+4. development parameter selection
+5. `.pp3` profile generation
+6. render through RawTherapee
+7. CSV audit log generation
 
 ---
 
-## 2. Компоненты системы
+## 2. System components
 
 ### 2.1 `scripts/analyze_raw.py`
 
-Отвечает за анализ одного RAW-файла до тоновых кривых. Основная задача — вычислить характеристики сцены и сенсора:
+Handles analysis of one RAW file before tone curves and white balance are applied. Its core purpose is to compute scene and sensor characteristics:
 
 - ISO
-- модель камеры
-- модель объектива
+- camera model
+- lens model
 - `mean_green`
-- `under_pct` и `over_pct`
+- `under_pct` and `over_pct`
 - `dynamic_range_ev`
 - `estimated_shift_ev`
-- процент клиппинга и оценку переполнения сенсора
+- clipping ratio and sensor overflow estimate
 
-Модуль использует:
+This module uses:
 
-- `exiftool` для EXIF
-- `rawpy` для чтения линейных данных сенсора
-- `numpy` для статистики по пикселям и вычислений
+- `exiftool` for EXIF extraction
+- `rawpy` for reading linear sensor data
+- `numpy` for pixel statistics and calculations
 
 ### 2.2 `scripts/pdr_curve.py`
 
-Содержит измеренную кривую PDR для Sony α6100 и все вспомогательные функции для вычисления:
+Contains the measured PDR curve for the Sony α6100 and helper functions for:
 
 - `sensor_pdr_ceiling(iso)`
 - `pdr_delta_ev(iso)`
 - `dr_headroom_ratio(dr_ev, iso)`
 - `interp_control_points(points, x)`
 
-Эта часть является ключевой для решения, почему проект работает не по абсолютным порогам, а по реальному физическому лимиту сенсора.
+This module is central to why the project works with real sensor ceilings instead of arbitrary fixed thresholds.
 
 ### 2.3 `scripts/optimize_profile.py`
 
-Содержит конфигурацию `CONFIG` и логику записи параметров в RawTherapee `.pp3` файл.
+Contains the `CONFIG` settings and the logic for writing parameters into a RawTherapee `.pp3` profile.
 
-Основные задачи:
+Its main responsibilities are:
 
-- вычисление параметров профиля под каждый кадр
-- корректировка секций INI в `.pp3`
-- выбор объектива и профиля lensfun
-- запись `InputProfile` с корректным путём к `.dcp`
-- возврат словаря `applied` с тем, что реально было записано
+- deriving per-frame profile parameters
+- adjusting INI sections in `.pp3`
+- selecting the correct lens profile
+- writing `InputProfile` with the correct path to the `.dcp` file
+- returning an `applied` dictionary containing the values actually written
 
-Этот модуль является "двигателем" профиля: он не только выбирает параметры, но и фактически пишет итоговый `.pp3`.
+This is the engine that turns computed decisions into a final profile file.
 
 ### 2.4 `scripts/process_raw.py`
 
-Это точка входа и оркестратор пайплайна.
+This is the entry point and orchestrator for the pipeline.
 
-Он выполняет:
+It performs:
 
-- перечисление RAW-файлов в каталоге
-- вызов анализа для каждого кадра
-- принятие решений по `exposure / DRC / denoise / lens` 
-- формирование временного или постоянного `.pp3`
-- запуск `rawtherapee-cli`
-- экспорт JPEG
-- запись CSV-отчёта
+- enumerating RAW files in a directory
+- calling analysis for each frame
+- making decisions for exposure, DRC, denoise, and lens handling
+- generating a temporary or retained `.pp3`
+- launching `rawtherapee-cli`
+- exporting JPEG outputs
+- writing CSV reports
 
-Также здесь находится логика параллельной обработки через `ProcessPoolExecutor`.
+It also contains parallel processing logic based on `ProcessPoolExecutor`.
 
 ---
 
-## 3. Основной рабочий цикл
+## 3. Main runtime flow
 
 ```text
-RAW-файл (.ARW)
+RAW file (.ARW)
     │
     ├── EXIF: ISO / Camera / Lens
     ├── sensor analysis: rawpy + numpy
@@ -113,71 +113,71 @@ RAW-файл (.ARW)
 
 ---
 
-## 4. Ключевые принципы архитектуры
+## 4. Architectural principles
 
-### 4.1 Не абсолютные пороги, а относительные измерения
+### 4.1 Relative measurements instead of absolute thresholds
 
-Вместо жестких правил вроде `dynamic_range_ev > 12` проект опирается на физически измеренный потолок сенсора по ISO. Это важно, потому что:
+Instead of relying on rigid rules such as `dynamic_range_ev > 12`, the project uses the sensor's real measured ceiling at the current ISO. This matters because:
 
-- ISO влияет на реальный динамический диапазон сенсора
-- контраст сцены нужно сравнивать с реальной емкостью сенсора, а не с условным “средним” значением
-- на высоком ISO шум и потеря PDR гораздо важнее, чем на низком
+- ISO directly affects the real dynamic range of the sensor
+- scene contrast must be compared with the sensor's true capacity, not a generic average
+- on higher ISO values, noise and PDR loss matter much more than on lower ISO values
 
-### 4.2 Физика и эвристики в одном слое
+### 4.2 Physics and heuristics in one pipeline
 
-Мы храним две категории логики:
+The project keeps two categories of logic:
 
-- математические: `pdr_curve.py`, `analyze_raw.py`
-- эвристические стратегии: `process_raw.py` и `optimize_profile.py`
+- mathematical logic: `pdr_curve.py`, `analyze_raw.py`
+- heuristic decision logic: `process_raw.py`, `optimize_profile.py`
 
-Это позволяет адаптировать систему под реальные кадры без переписывания всей модели.
+This allows adaptation to real-world scene variations without rewriting the full model.
 
-### 4.3 Профиль как результат, а не как предположение
+### 4.3 The profile is a result, not a guess
 
-Каждый `.pp3` генерируется на основе:
+Each `.pp3` is generated from:
 
-- базового шаблона
-- вычисленных параметров
-- реальных значений, записанных обратно в профиль
+- a base template
+- computed values for this frame
+- real values written back into the profile
 
-Это даёт возможность логировать именно то, что реально встало в файл и было использовано при проявке.
-
----
-
-## 5. Данные и логирование
-
-Каждый файл создаёт:
-
-- JPEG-результат
-- `.pp3` при необходимости (`--keep`)
-- CSV-лог с параметрами, принятыми решениями и выходными путями
-
-Это позволяет сравнивать несколько прогонов и анализировать, какие параметры дали лучший результат.
+That makes it possible to log exactly what was written and used in the final render.
 
 ---
 
-## 6. Ограничения архитектуры
+## 5. Data and logging
 
-Проект настроен под:
+Each processed file creates:
+
+- a JPEG output
+- a `.pp3` file, when `--keep` is enabled
+- a CSV report containing applied parameters, decisions made, and output paths
+
+This makes it possible to compare multiple runs and inspect which settings worked best for which scene.
+
+---
+
+## 6. Architectural limitations
+
+The current project is tailored to:
 
 - Sony α6100 / ILCE-6100
-- профиль RawTherapee, который понимает секции `FattalToneMapping`
-- систему lensfun, доступную в RawTherapee
+- RawTherapee builds that support the `FattalToneMapping` section
+- lensfun profiles available in RawTherapee
 
-Поэтому он хорошо работает как специализированный инструмент для одной системы, но не является универсальным RAW-процессором для всех камер.
+As a result, it is a specialized RAW processing tool for one sensor family and a small set of known lenses, not a universal camera-agnostic RAW processor.
 
 ---
 
-## 7. Что сделано в проекте
+## 7. What has been implemented
 
-На текущем этапе реализованы:
+The current version includes:
 
-- обработка пакетного каталога RAW
-- анализ EXIF и линейных сенсорных данных
-- расчет PDR и headroom метрик
-- автоматическое принятие решений по экспозиции и DRC
-- генерация `.pp3`-профилей
-- запись CSV-отчётов
-- сохранение релизной версии `release/raw-photo-optimizer/` для skill-пакета
+- batch RAW processing from a folder
+- EXIF and raw sensor analysis
+- PDR and headroom metric calculations
+- automatic exposure and DRC decisions
+- `.pp3` profile generation
+- CSV report generation
+- a clean release bundle at `release/raw-photo-optimizer/`
 
-Подробнее о методике и настройках см. в [calibration.md](calibration.md).
+For methodology and tuning details, see [calibration.md](calibration.md).
