@@ -13,6 +13,9 @@ ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = ROOT / "scripts" / "process_raw.py"
 RAW_DIR = ROOT / "examples" / "sample_raw"
 OUTPUT_DIR = ROOT / "examples" / "sample_output"
+sys.path.insert(0, str(ROOT / "scripts"))
+
+import process_raw as process_raw_module
 
 
 def resolve_rawtherapee_cli() -> Path:
@@ -180,6 +183,39 @@ def assert_profile_values_preserved(input_profile: Path, output_profile: Path) -
         f"Only {compared_parameters} controlled parameters were compared between "
         f"{input_profile.name} and {output_profile.name}"
     )
+
+
+def test_process_raw_adds_bw_suffix_only_in_black_and_white_mode(tmp_path, monkeypatch) -> None:
+    input_raw = tmp_path / "DSC05456.ARW"
+    input_raw.touch()
+    stats = {"overexposed_pct": 0.0, "underexposed_pct": 0.0}
+    exif = {"ISO": 100, "Model": "ILCE-6100", "LensModel": "Test Lens"}
+    monkeypatch.setattr(
+        process_raw_module,
+        "analyze_file",
+        lambda _file_path: {"stats": stats, "exif": exif},
+    )
+    monkeypatch.setattr(
+        process_raw_module,
+        "optimize_profile",
+        lambda *_args, **_kwargs: ("", [], {}),
+    )
+
+    def fake_subprocess_run(command, **_kwargs):
+        if command[0] == "rm":
+            shutil.rmtree(command[-1], ignore_errors=True)
+        else:
+            temp_output_dir = Path(command[2])
+            (temp_output_dir / "DSC05456.jpg").write_bytes(b"jpeg")
+        return subprocess.CompletedProcess(command, 0, stdout="", stderr="")
+
+    monkeypatch.setattr(process_raw_module.subprocess, "run", fake_subprocess_run)
+
+    color_result = process_raw_module.process_raw(input_raw, tmp_path / "output", bw=False)
+    bw_result = process_raw_module.process_raw(input_raw, tmp_path / "output", bw=True)
+
+    assert Path(color_result["output_file"]).name == "DSC05456.jpg"
+    assert Path(bw_result["output_file"]).name == "DSC05456_BW.jpg"
 
 
 def test_process_raw_with_real_rawtherapee(tmp_path: Path) -> None:

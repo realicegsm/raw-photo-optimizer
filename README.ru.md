@@ -117,6 +117,12 @@ python3 scripts/process_raw.py /path/to/raw /path/to/output
 python3 scripts/process_raw.py /path/to/raw /path/to/output --keep --log
 ```
 
+Для обработки фотографий в чёрно-белом варианте:
+
+```bash
+python3 scripts/process_raw.py /path/to/raw /path/to/output --BW
+```
+
 Для отдельного анализа одного файла:
 
 ```bash

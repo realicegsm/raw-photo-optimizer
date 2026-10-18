@@ -123,3 +123,27 @@ def test_manual_lens_profile_generation_matches_rawtherapee_sidecar(tmp_path):
         "UseCA": "true",
     }
     assert_generated_profile_matches_rt_output(input_profile, output_profile, expected_lens_profile)
+
+
+def test_black_and_white_option_sets_profile_mode(tmp_path):
+    params = {
+        "comp_val": "0",
+        "drc_val": "0",
+        "camera_model": "ILCE-6100",
+        "lens_model": "",
+        "over_pct": 0.0,
+        "under_pct": 0.0,
+        "iso": 100,
+        "dr_ev": None,
+        "mean_green": 0.15,
+    }
+
+    for enabled, expected in ((False, "false"), (True, "true")):
+        output_profile = tmp_path / f"profile_{enabled}.pp3"
+        optimize_pp3(
+            TEMPLATE_PROFILE,
+            output_profile,
+            {**params, "black_and_white": enabled},
+        )
+
+        assert read_section_values(output_profile, "Black & White")["Enabled"] == expected

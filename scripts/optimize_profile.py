@@ -342,6 +342,12 @@ def optimize_pp3(base_pp3_path, output_pp3_path, params):
                 print(f"⚠️ Warning: DCP profile not found at {dcp_path}")
     
     content = modify_pp3_value(content, "[Exposure]", "Compensation", str(comp_val))
+    content = modify_pp3_value(
+        content,
+        "[Black & White]",
+        "Enabled",
+        "true" if params.get("black_and_white", False) else "false",
+    )
 
     content = modify_pp3_value(content, "[FattalToneMapping]", "Enabled", "true" if float(drc_val) > 0 else "false")
     content = modify_pp3_value(content, "[FattalToneMapping]", "Amount", str(drc_val))

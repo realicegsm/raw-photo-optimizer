@@ -57,6 +57,9 @@ The scripts are NOT standalone executables. They MUST be executed via the Python
    Write a detailed CSV report into the output directory:
    `python3 scripts/process_raw.py [input_dir] [output_dir] --log`
 
+   Render photos in black and white:
+   `python3 scripts/process_raw.py [input_dir] [output_dir] --BW`
+
 3. **Defaults**: if directories are not specified, the script falls back to `DEFAULT_RAW_DIR` / `DEFAULT_OUTPUT_DIR` defined at the top of `process_raw.py`.
 
 ## 📂 Tooling Architecture

@@ -117,6 +117,12 @@ Save the generated `.pp3` file and write a CSV report:
 python3 scripts/process_raw.py /path/to/raw /path/to/output --keep --log
 ```
 
+Render photos in black and white:
+
+```bash
+python3 scripts/process_raw.py /path/to/raw /path/to/output --BW
+```
+
 Analyze a single RAW file:
 
 ```bash
