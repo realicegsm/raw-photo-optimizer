@@ -4,6 +4,7 @@ __pycache__/
 *.pyo
 *.log
 /test-output/
+/.vscode/
 /examples/sample_output/
 /release/*.zip
 /release/**/.DS_Store
