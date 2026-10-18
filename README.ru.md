@@ -117,10 +117,12 @@ python3 scripts/process_raw.py /path/to/raw /path/to/output
 python3 scripts/process_raw.py /path/to/raw /path/to/output --keep --log
 ```
 
-Для обработки фотографий в чёрно-белом варианте:
+Варианты преобразования в чёрно-белый режим (указывайте только один):
 
 ```bash
-python3 scripts/process_raw.py /path/to/raw /path/to/output --BW
+python3 scripts/process_raw.py /path/to/raw /path/to/output -BW       # микшер каналов
+python3 scripts/process_raw.py /path/to/raw /path/to/output --BW_AVG  # усреднённое обесцвечивание
+python3 scripts/process_raw.py /path/to/raw /path/to/output --BW_LAB  # через Lab Adjustments
 ```
 
 Для отдельного анализа одного файла:

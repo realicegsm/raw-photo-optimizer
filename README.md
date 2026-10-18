@@ -117,10 +117,12 @@ Save the generated `.pp3` file and write a CSV report:
 python3 scripts/process_raw.py /path/to/raw /path/to/output --keep --log
 ```
 
-Render photos in black and white:
+Choose one black-and-white conversion mode:
 
 ```bash
-python3 scripts/process_raw.py /path/to/raw /path/to/output --BW
+python3 scripts/process_raw.py /path/to/raw /path/to/output -BW       # channel mixer
+python3 scripts/process_raw.py /path/to/raw /path/to/output --BW_AVG  # RGB-relative desaturation
+python3 scripts/process_raw.py /path/to/raw /path/to/output --BW_LAB  # Lab Adjustments
 ```
 
 Analyze a single RAW file:

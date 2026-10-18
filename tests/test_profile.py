@@ -125,7 +125,7 @@ def test_manual_lens_profile_generation_matches_rawtherapee_sidecar(tmp_path):
     assert_generated_profile_matches_rt_output(input_profile, output_profile, expected_lens_profile)
 
 
-def test_black_and_white_option_sets_profile_mode(tmp_path):
+def test_black_and_white_modes_write_expected_profile_settings(tmp_path):
     params = {
         "comp_val": "0",
         "drc_val": "0",
@@ -138,12 +138,83 @@ def test_black_and_white_option_sets_profile_mode(tmp_path):
         "mean_green": 0.15,
     }
 
-    for enabled, expected in ((False, "false"), (True, "true")):
-        output_profile = tmp_path / f"profile_{enabled}.pp3"
+    expected_modes = {
+        "channel_mixer": {
+            "Enabled": "true",
+            "Method": "ChannelMixer",
+            "Auto": "false",
+            "ComplementaryColors": "true",
+            "Setting": "Luminance",
+            "Filter": "None",
+            "MixerRed": "30",
+            "MixerOrange": "33",
+            "MixerYellow": "33",
+            "MixerGreen": "59",
+            "MixerCyan": "33",
+            "MixerBlue": "11",
+            "MixerMagenta": "33",
+            "MixerPurple": "33",
+            "GammaRed": "0",
+            "GammaGreen": "0",
+            "GammaBlue": "0",
+            "Algorithm": "SP",
+            "LuminanceCurve": "0;",
+            "BeforeCurveMode": "Standard",
+            "AfterCurveMode": "Standard",
+            "BeforeCurve": "0;",
+            "AfterCurve": "0;",
+        },
+        "desaturation": {
+            "Enabled": "true",
+            "Method": "Desaturation",
+            "Auto": "false",
+            "ComplementaryColors": "true",
+            "Setting": "RGB-Rel",
+            "Filter": "None",
+            "MixerRed": "33",
+            "MixerOrange": "33",
+            "MixerYellow": "33",
+            "MixerGreen": "33",
+            "MixerCyan": "33",
+            "MixerBlue": "33",
+            "MixerMagenta": "33",
+            "MixerPurple": "33",
+            "GammaRed": "0",
+            "GammaGreen": "0",
+            "GammaBlue": "0",
+            "Algorithm": "SP",
+            "LuminanceCurve": "0;",
+            "BeforeCurveMode": "Standard",
+            "AfterCurveMode": "Standard",
+            "BeforeCurve": "0;",
+            "AfterCurve": "0;",
+        },
+    }
+
+    for mode, expected_values in expected_modes.items():
+        output_profile = tmp_path / f"profile_{mode}.pp3"
         optimize_pp3(
             TEMPLATE_PROFILE,
             output_profile,
-            {**params, "black_and_white": enabled},
+            {**params, "black_and_white_mode": mode},
         )
 
-        assert read_section_values(output_profile, "Black & White")["Enabled"] == expected
+        actual_values = read_section_values(output_profile, "Black & White")
+        for key, expected_value in expected_values.items():
+            assert actual_values[key] == expected_value
+
+    lab_profile = tmp_path / "profile_lab.pp3"
+    optimize_pp3(
+        TEMPLATE_PROFILE,
+        lab_profile,
+        {**params, "black_and_white_mode": "lab"},
+    )
+    assert read_section_values(lab_profile, "Black & White")["Enabled"] == "false"
+    assert read_section_values(lab_profile, "Lab Adjustments") == {
+        "Enabled": "true",
+        "Chromaticity": "-100",
+    }
+
+    color_profile = tmp_path / "profile_color.pp3"
+    optimize_pp3(TEMPLATE_PROFILE, color_profile, params)
+    assert read_section_values(color_profile, "Black & White")["Enabled"] == "false"

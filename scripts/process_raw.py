@@ -33,7 +33,16 @@ def analyze_file(file_path):
         print(f"❌ Analysis failed for {file_path}: {e}")
         return None
 
-def optimize_profile(file_path, file_id, analysis_stats, camera_model, lens_model, iso, keep=False, bw=False):
+def optimize_profile(
+    file_path,
+    file_id,
+    analysis_stats,
+    camera_model,
+    lens_model,
+    iso,
+    keep=False,
+    bw_mode: str | None = None,
+):
     """Determines the best settings and creates a .pp3 profile via module call."""
     current_dir = Path(__file__).parent
     base_profile = current_dir.parent / "templates" / BASE_PROFILE_NAME
@@ -185,7 +194,7 @@ def optimize_profile(file_path, file_id, analysis_stats, camera_model, lens_mode
         "iso": iso,
         "dr_ev": dr_ev,
         "mean_green": mean_green,
-        "black_and_white": bw,
+        "black_and_white_mode": bw_mode,
     }
     # optimize_pp3() is the single source of truth for denoise Luma/Chroma,
     # Shadow Lift, and Contrast — it returns exactly what it wrote to the
@@ -229,7 +238,7 @@ def optimize_profile(file_path, file_id, analysis_stats, camera_model, lens_mode
 
     return out_profile, decisions, decision_values
 
-def process_raw(file_path, output_dir, keep=False, bw=False):
+def process_raw(file_path, output_dir, keep=False, bw_mode: str | None = None):
     """The full pipeline for one file. Now designed to be run in a process pool."""
     file_id = Path(file_path).stem
     print(f"📸 Processing {file_id}...")
@@ -311,7 +320,7 @@ def process_raw(file_path, output_dir, keep=False, bw=False):
     
     try:
         profile, decisions, decision_values = optimize_profile(
-            file_path, file_id, stats, camera, lens, iso, keep=keep, bw=bw
+            file_path, file_id, stats, camera, lens, iso, keep=keep, bw_mode=bw_mode
         )
     except Exception as e:
         report["reason"] = f"profile optimization error: {e}"
@@ -322,7 +331,12 @@ def process_raw(file_path, output_dir, keep=False, bw=False):
     report.update(decision_values)
     
     os.makedirs(output_dir, exist_ok=True)
-    output_name = f"{file_id}_BW" if bw else file_id
+    bw_suffixes = {
+        "channel_mixer": "_BW",
+        "desaturation": "_BW_AVG",
+        "lab": "_BW_LAB",
+    }
+    output_name = f"{file_id}{bw_suffixes[bw_mode]}" if bw_mode else file_id
     out_path = Path(output_dir) / f"{output_name}.jpg"
     if out_path.exists():
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -399,20 +413,42 @@ def main():
     parser.add_argument("output_dir", nargs="?", default=DEFAULT_OUTPUT_DIR, help="Output directory for JPGs")
     parser.add_argument("--keep", action="store_true", help="Keep generated .pp3 profiles in the input directory")
     parser.add_argument("--log", action="store_true", help="Write a CSV processing report to the output directory")
-    parser.add_argument("--BW", action="store_true", help="Process photos in black and white")
+    bw_group = parser.add_mutually_exclusive_group()
+    bw_group.add_argument(
+        "-BW",
+        "--BW",
+        dest="bw_mode",
+        action="store_const",
+        const="channel_mixer",
+        help="Convert to black and white using the channel mixer",
+    )
+    bw_group.add_argument(
+        "--BW_AVG",
+        dest="bw_mode",
+        action="store_const",
+        const="desaturation",
+        help="Convert to black and white using RGB-relative desaturation",
+    )
+    bw_group.add_argument(
+        "--BW_LAB",
+        dest="bw_mode",
+        action="store_const",
+        const="lab",
+        help="Convert to black and white using Lab chromaticity adjustment",
+    )
     
     args = parser.parse_args()
     raw_dir = args.input_dir
     output_dir = args.output_dir
     keep = args.keep
     log_enabled = args.log
-    bw = args.BW
+    bw_mode = args.bw_mode
         
     print(f"📂 Input Directory: {raw_dir}")
     print(f"📂 Output Directory: {output_dir}")
     print(f"💾 Keep Profiles: {'Yes' if keep else 'No'}")
     print(f"🧾 CSV Log: {'Yes' if log_enabled else 'No'}")
-    print(f"⚫ Black & White: {'Yes' if bw else 'No'}")
+    print(f"⚫ Black & White: {bw_mode or 'No'}")
     
     raw_path = Path(raw_dir)
     if not raw_path.exists() or not raw_path.is_dir():
@@ -433,7 +469,7 @@ def main():
     with ProcessPoolExecutor(max_workers=MAX_WORKERS) as executor:
         # Map process_raw to all raw_files
         future_to_file = {
-            executor.submit(process_raw, raw_file, output_dir, keep=keep, bw=bw): raw_file
+            executor.submit(process_raw, raw_file, output_dir, keep=keep, bw_mode=bw_mode): raw_file
             for raw_file in raw_files
         }
         

@@ -185,7 +185,18 @@ def assert_profile_values_preserved(input_profile: Path, output_profile: Path) -
     )
 
 
-def test_process_raw_adds_bw_suffix_only_in_black_and_white_mode(tmp_path, monkeypatch) -> None:
+@pytest.mark.parametrize(
+    ("bw_mode", "expected_filename"),
+    [
+        (None, "DSC05456.jpg"),
+        ("channel_mixer", "DSC05456_BW.jpg"),
+        ("desaturation", "DSC05456_BW_AVG.jpg"),
+        ("lab", "DSC05456_BW_LAB.jpg"),
+    ],
+)
+def test_process_raw_adds_bw_suffix_for_bw_modes(
+    tmp_path, monkeypatch, bw_mode, expected_filename
+) -> None:
     input_raw = tmp_path / "DSC05456.ARW"
     input_raw.touch()
     stats = {"overexposed_pct": 0.0, "underexposed_pct": 0.0}
@@ -211,11 +222,11 @@ def test_process_raw_adds_bw_suffix_only_in_black_and_white_mode(tmp_path, monke
 
     monkeypatch.setattr(process_raw_module.subprocess, "run", fake_subprocess_run)
 
-    color_result = process_raw_module.process_raw(input_raw, tmp_path / "output", bw=False)
-    bw_result = process_raw_module.process_raw(input_raw, tmp_path / "output", bw=True)
+    result = process_raw_module.process_raw(
+        input_raw, tmp_path / "output", bw_mode=bw_mode
+    )
 
-    assert Path(color_result["output_file"]).name == "DSC05456.jpg"
-    assert Path(bw_result["output_file"]).name == "DSC05456_BW.jpg"
+    assert Path(result["output_file"]).name == expected_filename
 
 
 def test_process_raw_with_real_rawtherapee(tmp_path: Path) -> None:
