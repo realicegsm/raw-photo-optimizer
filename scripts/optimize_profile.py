@@ -342,12 +342,44 @@ def optimize_pp3(base_pp3_path, output_pp3_path, params):
                 print(f"⚠️ Warning: DCP profile not found at {dcp_path}")
     
     content = modify_pp3_value(content, "[Exposure]", "Compensation", str(comp_val))
-    content = modify_pp3_value(
-        content,
-        "[Black & White]",
-        "Enabled",
-        "true" if params.get("black_and_white", False) else "false",
-    )
+    bw_mode = params.get("black_and_white_mode")
+    if bw_mode not in (None, "channel_mixer", "desaturation", "lab"):
+        raise ValueError(f"Unsupported black-and-white mode: {bw_mode}")
+
+    if bw_mode in ("channel_mixer", "desaturation"):
+        bw_values = {
+            "Enabled": "true",
+            "Method": "ChannelMixer" if bw_mode == "channel_mixer" else "Desaturation",
+            "Auto": "false",
+            "ComplementaryColors": "true",
+            "Setting": "Luminance" if bw_mode == "channel_mixer" else "RGB-Rel",
+            "Filter": "None",
+            "MixerRed": "30" if bw_mode == "channel_mixer" else "33",
+            "MixerOrange": "33",
+            "MixerYellow": "33",
+            "MixerGreen": "59" if bw_mode == "channel_mixer" else "33",
+            "MixerCyan": "33",
+            "MixerBlue": "11" if bw_mode == "channel_mixer" else "33",
+            "MixerMagenta": "33",
+            "MixerPurple": "33",
+            "GammaRed": "0",
+            "GammaGreen": "0",
+            "GammaBlue": "0",
+            "Algorithm": "SP",
+            "LuminanceCurve": "0;",
+            "BeforeCurveMode": "Standard",
+            "AfterCurveMode": "Standard",
+            "BeforeCurve": "0;",
+            "AfterCurve": "0;",
+        }
+        for key, value in bw_values.items():
+            content = modify_pp3_value(content, "[Black & White]", key, value)
+    else:
+        content = modify_pp3_value(content, "[Black & White]", "Enabled", "false")
+
+    if bw_mode == "lab":
+        content = modify_pp3_value(content, "[Lab Adjustments]", "Enabled", "true")
+        content = modify_pp3_value(content, "[Lab Adjustments]", "Chromaticity", "-100")
 
     content = modify_pp3_value(content, "[FattalToneMapping]", "Enabled", "true" if float(drc_val) > 0 else "false")
     content = modify_pp3_value(content, "[FattalToneMapping]", "Amount", str(drc_val))
