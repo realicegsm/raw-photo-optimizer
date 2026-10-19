@@ -2,8 +2,8 @@
 name: "raw-photo-optimizer"
 description: "Automated Sony A6100 RAW (.ARW) development pipeline: sensor-level analysis, PDR-relative decisions (exposure, Fattal DRC, shadow lift, denoise), per-file RawTherapee .pp3 generation and parallel rendering with a full CSV audit log."
 status: proposal
-version: "v6"
-date: "2026-10-09"
+version: "v7"
+date: "2026-10-19"
 ---
 
 # Raw Photo Optimizer 📸
@@ -34,7 +34,7 @@ Resulting settings (all tunable in `CONFIG` inside `optimize_profile.py`):
 - **Highlight Recovery**: enabled when clipping > 0.005% (Hlth 0.85, or 0.90 above 0.5%).
 - **Noise reduction**: continuous ramp by `delta_ev` (Luma ≤ 35, Chroma ≤ 50), ×1.2–1.5 for dark scenes, `Ldetail` 45→65, `Median` only above `delta_ev` 6.0.
 - **Lens correction**: Sony 16-50mm PZ and 55-210mm recognised → lensfun manual profile with distortion, vignetting and CA; otherwise `lfauto`. `[RAW] CA=true` always.
-- **Colour**: Adobe Standard DCP for the A6100, path resolved dynamically relative to `templates/`.
+- **Colour and lens profiles**: Adobe Standard DCP and matching lensfun LCP profile, resolved relative to `templates/`.
 
 ## 📋 User Request Template
 To trigger this skill, the user should provide:
@@ -57,6 +57,9 @@ The scripts are NOT standalone executables. They MUST be executed via the Python
    Write a detailed CSV report into the output directory:
    `python3 scripts/process_raw.py [input_dir] [output_dir] --log`
 
+   Choose one black-and-white conversion mode:
+   `-BW` (channel mixer), `--BW_AVG` (desaturation), or `--BW_LAB` (Luminance Curve chromaticity adjustment).
+
 3. **Defaults**: if directories are not specified, the script falls back to `DEFAULT_RAW_DIR` / `DEFAULT_OUTPUT_DIR` defined at the top of `process_raw.py`.
 
 ## 📂 Tooling Architecture
@@ -64,7 +67,7 @@ The scripts are NOT standalone executables. They MUST be executed via the Python
 - `scripts/analyze_raw.py`: EXIF extraction and sensor-level exposure statistics.
 - `scripts/optimize_profile.py`: `CONFIG` with all calibration constants; generates the per-file `.pp3` and returns the exact values it applied.
 - `scripts/process_raw.py`: orchestrator — parallel rendering (`ProcessPoolExecutor`), decision logic for exposure/DRC, CSV audit log.
-- `templates/`: base `.pp3` profile and the Adobe Standard `.dcp` colour file.
+- `templates/`: base `.pp3`, Adobe Standard `.dcp`, and lensfun `.lcp` profiles.
 
 ## ⚠️ Profile Management
 - **Default mode**: profiles are ephemeral — created in `/tmp`, used for the render, deleted afterwards.
@@ -73,7 +76,7 @@ The scripts are NOT standalone executables. They MUST be executed via the Python
   - the *applied* profile as `<output>.pp3` next to the output JPG, copied by RawTherapee itself (`-O`) — includes RawTherapee's own defaults for unset keys. Diffing the two reveals parameters silently ignored after RawTherapee renames sections or keys.
 
 ## 🧾 CSV Report (`--log`)
-One row per file: raw statistics (`dynamic_range_ev`, `mean_green`, `headroom_ratio`, `percentile_low_0_1`…), every applied value (`exposure_compensation_ev`, `drc_amount`, `drc_anchor`, `drc_dampened`, `exposure_contrast`, `denoise_*`, `shadow_lift_*`, `lens_profile_applied`…), a human-readable `decisions_summary` and output paths. Values are read back from what was actually written to the profile, so the log matches the render.
+One row per file: raw statistics (`dynamic_range_ev`, `mean_green`, `headroom_ratio`, `percentile_low_0_1`…), every applied value (`exposure_compensation_ev`, `drc_amount`, `drc_anchor`, `drc_dampened`, `exposure_contrast`, `denoise_*`, `shadow_lift_*`, `lens_profile_applied`…), the selected black-and-white option (`black_and_white_mode`) and its PP3 settings as JSON (`black_and_white_parameters`), a human-readable `decisions_summary` and output paths. Profile settings in the report match the values written to the generated profile.
 
 ## ⚠️ Known Limitations
 - Calibrated for one sensor (A6100) and two lenses; thresholds come from a small manually-graded sample.

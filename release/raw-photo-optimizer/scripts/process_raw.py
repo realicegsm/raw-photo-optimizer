@@ -1,10 +1,10 @@
 import subprocess
-import json
 import sys
 import os
 import shutil
 import argparse
 import csv
+import json
 from pathlib import Path
 from datetime import datetime
 from concurrent.futures import ProcessPoolExecutor, as_completed
@@ -15,7 +15,7 @@ from optimize_profile import optimize_pp3, CONFIG
 from pdr_curve import dr_headroom_ratio, pdr_delta_ev
 
 # --- Default Configuration ---
-RAWTHERAPEE_BIN = "/usr/local/bin/rawtherapee-cli"
+RAWTHERAPEE_BIN = os.environ.get("RAWTHERAPEE_BIN", "/usr/local/bin/rawtherapee-cli")
 DEFAULT_RAW_DIR = "/Users/realice/Documents/Raw"
 DEFAULT_OUTPUT_DIR = "/Users/realice/Documents/Raw/Processed"
 #BASE_PROFILE_NAME = "OpenClaw_Base.pp3"
@@ -34,7 +34,16 @@ def analyze_file(file_path):
         print(f"❌ Analysis failed for {file_path}: {e}")
         return None
 
-def optimize_profile(file_path, file_id, analysis_stats, camera_model, lens_model, iso, keep=False):
+def optimize_profile(
+    file_path,
+    file_id,
+    analysis_stats,
+    camera_model,
+    lens_model,
+    iso,
+    keep=False,
+    bw_mode: str | None = None,
+):
     """Determines the best settings and creates a .pp3 profile via module call."""
     current_dir = Path(__file__).parent
     base_profile = current_dir.parent / "templates" / BASE_PROFILE_NAME
@@ -49,8 +58,6 @@ def optimize_profile(file_path, file_id, analysis_stats, camera_model, lens_mode
     dr_ev = analysis_stats.get("dynamic_range_ev")
     mean_green = analysis_stats.get("mean_green")
     estimated_shift_ev = analysis_stats.get("estimated_shift_ev")
-    p_low = analysis_stats.get("percentile_low_0_1")
-
     comp = "0.0"
     drc = "0"
     decision_values = {
@@ -75,6 +82,8 @@ def optimize_profile(file_path, file_id, analysis_stats, camera_model, lens_mode
         "drc_anchor": 0,
         "lens_profile_applied": "",
         "lens_camera_model": "",
+        "black_and_white_mode": "",
+        "black_and_white_parameters": "{}",
     }
 
     if estimated_shift_ev is not None:
@@ -188,6 +197,7 @@ def optimize_profile(file_path, file_id, analysis_stats, camera_model, lens_mode
         "iso": iso,
         "dr_ev": dr_ev,
         "mean_green": mean_green,
+        "black_and_white_mode": bw_mode,
     }
     # optimize_pp3() is the single source of truth for denoise Luma/Chroma,
     # Shadow Lift, and Contrast — it returns exactly what it wrote to the
@@ -195,6 +205,22 @@ def optimize_profile(file_path, file_id, analysis_stats, camera_model, lens_mode
     # derived guess that can drift out of sync (previous version always
     # logged 0/0 here).
     applied = optimize_pp3(base_profile, out_profile, params)
+    mode_flags = {
+        "channel_mixer": "-BW",
+        "desaturation": "--BW_AVG",
+        "lab": "--BW_LAB",
+    }
+    decision_values["black_and_white_mode"] = (
+        mode_flags[applied["black_and_white_mode"]]
+        if applied["black_and_white_mode"]
+        else ""
+    )
+    decision_values["black_and_white_parameters"] = json.dumps(
+        applied["black_and_white_parameters"],
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    )
 
     if applied["contrast"] > 0:
         decision_values["exposure_contrast"] = applied["contrast"]
@@ -231,12 +257,12 @@ def optimize_profile(file_path, file_id, analysis_stats, camera_model, lens_mode
 
     return out_profile, decisions, decision_values
 
-def process_raw(file_path, output_dir, keep=False):
+def process_raw(file_path, output_dir, keep=False, bw_mode: str | None = None):
     """The full pipeline for one file. Now designed to be run in a process pool."""
     file_id = Path(file_path).stem
     print(f"📸 Processing {file_id}...")
     
-    report = {
+    report: dict[str, object] = {
         "timestamp": datetime.now().isoformat(timespec="seconds"),
         "file": str(file_path),
         "file_id": file_id,
@@ -279,6 +305,8 @@ def process_raw(file_path, output_dir, keep=False):
         "drc_anchor": "",
         "lens_profile_applied": "",
         "lens_camera_model": "",
+        "black_and_white_mode": "",
+        "black_and_white_parameters": "{}",
     }
     
     analysis = analyze_file(file_path)
@@ -312,7 +340,9 @@ def process_raw(file_path, output_dir, keep=False):
     })
     
     try:
-        profile, decisions, decision_values = optimize_profile(file_path, file_id, stats, camera, lens, iso, keep=keep)
+        profile, decisions, decision_values = optimize_profile(
+            file_path, file_id, stats, camera, lens, iso, keep=keep, bw_mode=bw_mode
+        )
     except Exception as e:
         report["reason"] = f"profile optimization error: {e}"
         return report
@@ -322,10 +352,16 @@ def process_raw(file_path, output_dir, keep=False):
     report.update(decision_values)
     
     os.makedirs(output_dir, exist_ok=True)
-    out_path = Path(output_dir) / f"{file_id}.jpg"
+    bw_suffixes = {
+        "channel_mixer": "_BW",
+        "desaturation": "_BW_AVG",
+        "lab": "_BW_LAB",
+    }
+    output_name = f"{file_id}{bw_suffixes[bw_mode]}" if bw_mode else file_id
+    out_path = Path(output_dir) / f"{output_name}.jpg"
     if out_path.exists():
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        out_path = Path(output_dir) / f"{file_id}_v{timestamp}.jpg"
+        out_path = Path(output_dir) / f"{output_name}_v{timestamp}.jpg"
     
     temp_out_dir = Path(f"/tmp/rt_out_{file_id}_{datetime.now().strftime('%S')}")
     temp_out_dir.mkdir(parents=True, exist_ok=True)
@@ -384,6 +420,7 @@ def write_report(report_path, rows):
         "denoise_chroma", "denoise_ldetail", "denoise_median", "denoise_reason",
         "shadow_lift_amount", "shadow_highlights_amount", "headroom_ratio",
         "drc_anchor", "lens_profile_applied", "lens_camera_model",
+        "black_and_white_mode", "black_and_white_parameters",
         "decisions_summary", "file", "output_file", "output_profile",
         "profile",
     ]
@@ -398,17 +435,42 @@ def main():
     parser.add_argument("output_dir", nargs="?", default=DEFAULT_OUTPUT_DIR, help="Output directory for JPGs")
     parser.add_argument("--keep", action="store_true", help="Keep generated .pp3 profiles in the input directory")
     parser.add_argument("--log", action="store_true", help="Write a CSV processing report to the output directory")
+    bw_group = parser.add_mutually_exclusive_group()
+    bw_group.add_argument(
+        "-BW",
+        "--BW",
+        dest="bw_mode",
+        action="store_const",
+        const="channel_mixer",
+        help="Convert to black and white using the channel mixer",
+    )
+    bw_group.add_argument(
+        "--BW_AVG",
+        dest="bw_mode",
+        action="store_const",
+        const="desaturation",
+        help="Convert to black and white using RGB-relative desaturation",
+    )
+    bw_group.add_argument(
+        "--BW_LAB",
+        dest="bw_mode",
+        action="store_const",
+        const="lab",
+        help="Convert to black and white using Lab chromaticity adjustment",
+    )
     
     args = parser.parse_args()
     raw_dir = args.input_dir
     output_dir = args.output_dir
     keep = args.keep
     log_enabled = args.log
+    bw_mode = args.bw_mode
         
     print(f"📂 Input Directory: {raw_dir}")
     print(f"📂 Output Directory: {output_dir}")
     print(f"💾 Keep Profiles: {'Yes' if keep else 'No'}")
     print(f"🧾 CSV Log: {'Yes' if log_enabled else 'No'}")
+    print(f"⚫ Black & White: {bw_mode or 'No'}")
     
     raw_path = Path(raw_dir)
     if not raw_path.exists() or not raw_path.is_dir():
@@ -428,7 +490,10 @@ def main():
     # Parallel execution using ProcessPoolExecutor
     with ProcessPoolExecutor(max_workers=MAX_WORKERS) as executor:
         # Map process_raw to all raw_files
-        future_to_file = {executor.submit(process_raw, raw_file, output_dir, keep=keep): raw_file for raw_file in raw_files}
+        future_to_file = {
+            executor.submit(process_raw, raw_file, output_dir, keep=keep, bw_mode=bw_mode): raw_file
+            for raw_file in raw_files
+        }
         
         for future in as_completed(future_to_file):
             raw_file = future_to_file[future]

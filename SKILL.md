@@ -2,8 +2,8 @@
 name: "raw-photo-optimizer"
 description: "Automated Sony A6100 RAW (.ARW) development pipeline: sensor-level analysis, PDR-relative decisions (exposure, Fattal DRC, shadow lift, denoise), per-file RawTherapee .pp3 generation and parallel rendering with a full CSV audit log."
 status: proposal
-version: "v6"
-date: "2026-10-09"
+version: "v7"
+date: "2026-10-19"
 ---
 
 # Raw Photo Optimizer 📸
@@ -34,7 +34,7 @@ Resulting settings (all tunable in `CONFIG` inside `optimize_profile.py`):
 - **Highlight Recovery**: enabled when clipping > 0.005% (Hlth 0.85, or 0.90 above 0.5%).
 - **Noise reduction**: continuous ramp by `delta_ev` (Luma ≤ 35, Chroma ≤ 50), ×1.2–1.5 for dark scenes, `Ldetail` 45→65, `Median` only above `delta_ev` 6.0.
 - **Lens correction**: Sony 16-50mm PZ and 55-210mm recognised → lensfun manual profile with distortion, vignetting and CA; otherwise `lfauto`. `[RAW] CA=true` always.
-- **Colour**: Adobe Standard DCP for the A6100, path resolved dynamically relative to `templates/`.
+- **Colour and lens profiles**: Adobe Standard DCP and matching lensfun LCP profile, resolved relative to `templates/`.
 
 ## 📋 User Request Template
 To trigger this skill, the user should provide:
@@ -58,7 +58,7 @@ The scripts are NOT standalone executables. They MUST be executed via the Python
    `python3 scripts/process_raw.py [input_dir] [output_dir] --log`
 
    Choose one black-and-white conversion mode:
-   `-BW` (channel mixer), `--BW_AVG` (desaturation), or `--BW_LAB` (Lab Adjustments).
+   `-BW` (channel mixer), `--BW_AVG` (desaturation), or `--BW_LAB` (Luminance Curve chromaticity adjustment).
 
 3. **Defaults**: if directories are not specified, the script falls back to `DEFAULT_RAW_DIR` / `DEFAULT_OUTPUT_DIR` defined at the top of `process_raw.py`.
 
@@ -67,7 +67,7 @@ The scripts are NOT standalone executables. They MUST be executed via the Python
 - `scripts/analyze_raw.py`: EXIF extraction and sensor-level exposure statistics.
 - `scripts/optimize_profile.py`: `CONFIG` with all calibration constants; generates the per-file `.pp3` and returns the exact values it applied.
 - `scripts/process_raw.py`: orchestrator — parallel rendering (`ProcessPoolExecutor`), decision logic for exposure/DRC, CSV audit log.
-- `templates/`: base `.pp3` profile and the Adobe Standard `.dcp` colour file.
+- `templates/`: base `.pp3`, Adobe Standard `.dcp`, and lensfun `.lcp` profiles.
 
 ## ⚠️ Profile Management
 - **Default mode**: profiles are ephemeral — created in `/tmp`, used for the render, deleted afterwards.

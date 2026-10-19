@@ -72,7 +72,8 @@ raw-photo-optimizer/
 │       │   └── process_raw.py
 │       └── templates/
 │           ├── OpenClaw_a6100_Adobe.pp3
-│           └── Sony ILCE-6100A Adobe Standard.dcp
+│           ├── Sony ILCE-6100A Adobe Standard.dcp
+│           └── TTARTISAN AF 50mm F1.8 Neo.lcp
 └── .
 ```
 
@@ -122,7 +123,7 @@ Choose one black-and-white conversion mode:
 ```bash
 python3 scripts/process_raw.py /path/to/raw /path/to/output -BW       # channel mixer
 python3 scripts/process_raw.py /path/to/raw /path/to/output --BW_AVG  # RGB-relative desaturation
-python3 scripts/process_raw.py /path/to/raw /path/to/output --BW_LAB  # Lab Adjustments
+python3 scripts/process_raw.py /path/to/raw /path/to/output --BW_LAB  # Luminance Curve chromaticity adjustment
 ```
 
 Analyze a single RAW file:
@@ -170,7 +171,8 @@ release/raw-photo-optimizer/
 │   └── process_raw.py
 └── templates/
     ├── OpenClaw_a6100_Adobe.pp3
-    └── Sony ILCE-6100A Adobe Standard.dcp
+    ├── Sony ILCE-6100A Adobe Standard.dcp
+    └── TTARTISAN AF 50mm F1.8 Neo.lcp
 ```
 
 This structure is intended for publishing the skill bundle without local debris, temporary outputs, or development artifacts.

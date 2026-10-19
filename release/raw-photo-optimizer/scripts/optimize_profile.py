@@ -1,5 +1,4 @@
 import sys
-import os
 from pathlib import Path
 
 from pdr_curve import pdr_delta_ev, interp_control_points, dr_headroom_ratio
@@ -168,7 +167,6 @@ def modify_pp3_value(content, section, key, value):
         stripped = line.strip()
         if stripped.startswith('[') and stripped.endswith(']'):
             current_section = stripped
-            is_target_section = (current_section.strip().casefold() == target_section)
         
         if current_section and current_section.strip().casefold() == target_section and stripped.startswith(key + "="):
             new_lines.append(f"{key}={value}")
@@ -202,19 +200,79 @@ def normalize_lcp_path(value):
     if not text:
         return ""
 
-    candidate = text.replace("file://", "").replace("file:", "", 1).strip()
-    if not candidate:
+    # RawTherapee and profile-generation code sometimes leaves a stale prefix
+    # before the actual file path, like:
+    #   "/Users/.../Raw/file:/Users/.../TTARTISAN.lcp"
+    # We must keep only the final absolute path and strip any file: URL prefix.
+    for marker in ("file://", "file:"):
+        if marker in text:
+            text = text.rsplit(marker, 1)[-1]
+
+    text = text.strip().replace("\\", "/")
+    if not text:
         return ""
 
-    return str(Path(candidate).expanduser().resolve())
+    return str(Path(text).expanduser().resolve(strict=False))
 
 
-def determine_lens_profile(lens_info):
-    if not lens_info: return None
-    li = lens_info.lower()
+def determine_lens_profile(
+    lens_info: str | None,
+    templates_dir: Path | None = None,
+) -> Path | str | None:
+    if not lens_info:
+        return None
+
+    li = lens_info.lower().strip()
+
+    def normalize_text(value):
+        import re
+        return re.sub(r"[^a-z0-9]+", " ", value.lower()).strip()
+
+    def has_lcp_match(value, profile_name):
+        if not value or not profile_name:
+            return False
+
+        lens_norm = normalize_text(value)
+        profile_norm = normalize_text(profile_name)
+
+        if not lens_norm or not profile_norm:
+            return False
+
+        lens_tokens = set(lens_norm.split())
+        profile_tokens = set(profile_norm.split())
+
+        # Exact strong match: one normalized string contains the other.
+        if lens_norm in profile_norm or profile_norm in lens_norm:
+            return True
+
+        # Partial token match: most important tokens from the LCP profile appear in
+        # the EXIF lens name. This handles variants like:
+        #   "TTARTISAN 50mm F1.8" vs "TTARTISAN AF 50mm F1.8 Neo"
+        #   "E PZ 16-50mm F3.5-5.6 OSS II" vs "Sony E PZ 16-50mm f/3.5-5.6 OSS"
+        shared = lens_tokens & profile_tokens
+        if len(shared) >= max(2, len(profile_tokens) // 3):
+            return True
+
+        # Also allow a looser match when the profile's main brand/model tokens are
+        # present even if some optional suffix words differ.
+        for token in ("ttartisan", "sony", "e", "pz", "55", "210", "50", "16", "f18", "f1", "f35", "f36"):
+            if token in lens_tokens and token in profile_tokens:
+                return True
+
+        return False
+
+    if templates_dir is not None:
+        templates_dir = Path(templates_dir)
+        if templates_dir.exists():
+            for profile_path in sorted(templates_dir.glob("*.lcp")):
+                if has_lcp_match(li, profile_path.name):
+                    return profile_path
+
     # More flexible matching for Sony PZ 16-50 and 55-210
-    if "16-50" in li: return "Sony E PZ 16-50mm f/3.5-5.6 OSS"
-    if "55-210" in li: return "Sony E 55-210mm f/4.5-6.3 OSS"
+    if "16-50" in li or "16 50" in li or "16-50mm" in li:
+        return "Sony E PZ 16-50mm f/3.5-5.6 OSS"
+    if "55-210" in li or "55 210" in li or "55-210mm" in li:
+        return "Sony E 55-210mm f/4.5-6.3 OSS"
     return None
 
 def optimize_pp3(base_pp3_path, output_pp3_path, params):
@@ -263,6 +321,8 @@ def optimize_pp3(base_pp3_path, output_pp3_path, params):
         "drc_anchor": 0,
         "lens_profile_applied": "none",
         "lens_camera_model": "",
+        "black_and_white_mode": None,
+        "black_and_white_parameters": {},
     }
 
     with open(base_pp3_path, 'r', encoding='utf-8') as f:
@@ -284,6 +344,58 @@ def optimize_pp3(base_pp3_path, output_pp3_path, params):
                 print(f"⚠️ Warning: DCP profile not found at {dcp_path}")
     
     content = modify_pp3_value(content, "[Exposure]", "Compensation", str(comp_val))
+    bw_mode = params.get("black_and_white_mode")
+    if bw_mode not in (None, "channel_mixer", "desaturation", "lab"):
+        raise ValueError(f"Unsupported black-and-white mode: {bw_mode}")
+
+    bw_parameters = {
+        "Black & White": {"Enabled": "false"},
+        "Luminance Curve": {"Enabled": "false"},
+    }
+    if bw_mode in ("channel_mixer", "desaturation"):
+        bw_values = {
+            "Enabled": "true",
+            "Method": "ChannelMixer" if bw_mode == "channel_mixer" else "Desaturation",
+            "Auto": "false",
+            "ComplementaryColors": "true",
+            "Setting": "Luminance" if bw_mode == "channel_mixer" else "RGB-Rel",
+            "Filter": "None",
+            "MixerRed": "30" if bw_mode == "channel_mixer" else "33",
+            "MixerOrange": "33",
+            "MixerYellow": "33",
+            "MixerGreen": "59" if bw_mode == "channel_mixer" else "33",
+            "MixerCyan": "33",
+            "MixerBlue": "11" if bw_mode == "channel_mixer" else "33",
+            "MixerMagenta": "33",
+            "MixerPurple": "33",
+            "GammaRed": "0",
+            "GammaGreen": "0",
+            "GammaBlue": "0",
+            "Algorithm": "SP",
+            "LuminanceCurve": "0;",
+            "BeforeCurveMode": "Standard",
+            "AfterCurveMode": "Standard",
+            "BeforeCurve": "0;",
+            "AfterCurve": "0;",
+        }
+        for key, value in bw_values.items():
+            content = modify_pp3_value(content, "[Black & White]", key, value)
+        bw_parameters["Black & White"] = bw_values
+    else:
+        content = modify_pp3_value(content, "[Black & White]", "Enabled", "false")
+
+    if bw_mode == "lab":
+        content = modify_pp3_value(content, "[Luminance Curve]", "Enabled", "true")
+        content = modify_pp3_value(content, "[Luminance Curve]", "Chromaticity", "-100")
+        bw_parameters["Luminance Curve"] = {
+            "Enabled": "true",
+            "Chromaticity": "-100",
+        }
+    else:
+        content = modify_pp3_value(content, "[Luminance Curve]", "Enabled", "false")
+
+    applied["black_and_white_mode"] = bw_mode
+    applied["black_and_white_parameters"] = bw_parameters
 
     content = modify_pp3_value(content, "[FattalToneMapping]", "Enabled", "true" if float(drc_val) > 0 else "false")
     content = modify_pp3_value(content, "[FattalToneMapping]", "Amount", str(drc_val))
@@ -379,17 +491,34 @@ def optimize_pp3(base_pp3_path, output_pp3_path, params):
         applied["shadow_lift_amount"] = shadow_amount
         applied["shadow_highlights_amount"] = highlights_amount
 
-    selected_lens = determine_lens_profile(lens_model)
+    templates_dir = Path(__file__).resolve().parent.parent / "templates"
+    selected_lens = determine_lens_profile(lens_model, templates_dir)
     if selected_lens:
-        content = modify_pp3_value(content, "[LensProfile]", "LcMode", "lfmanual")
-        content = modify_pp3_value(content, "[LensProfile]", "UseDistortion", "true")
-        content = modify_pp3_value(content, "[LensProfile]", "UseVignette", "true")
-        content = modify_pp3_value(content, "[LensProfile]", "UseCA", "true")
-        content = modify_pp3_value(content, "[LensProfile]", "LFCameraMake", "Sony")
-        content = modify_pp3_value(content, "[LensProfile]", "LFCameraModel", camera_model)
-        content = modify_pp3_value(content, "[LensProfile]", "LFLens", selected_lens)
-        applied["lens_profile_applied"] = selected_lens
-        applied["lens_camera_model"] = camera_model
+        selected_lens_str = str(selected_lens)
+        selected_lens_path = Path(selected_lens)
+        if selected_lens_path.suffix.lower() == ".lcp":
+            lcp_path = normalize_lcp_path(selected_lens_path.resolve())
+            lcp_lens_name = lens_model or selected_lens_path.name
+            content = modify_pp3_value(content, "[LensProfile]", "LcMode", "lcp")
+            content = modify_pp3_value(content, "[LensProfile]", "LCPFile", lcp_path)
+            content = modify_pp3_value(content, "[LensProfile]", "UseDistortion", "true")
+            content = modify_pp3_value(content, "[LensProfile]", "UseVignette", "true")
+            content = modify_pp3_value(content, "[LensProfile]", "UseCA", "true")
+            content = modify_pp3_value(content, "[LensProfile]", "LFCameraMake", "Sony")
+            content = modify_pp3_value(content, "[LensProfile]", "LFCameraModel", camera_model)
+            content = modify_pp3_value(content, "[LensProfile]", "LFLens", lcp_lens_name)
+            applied["lens_profile_applied"] = selected_lens_path.name
+            applied["lens_camera_model"] = camera_model
+        else:
+            content = modify_pp3_value(content, "[LensProfile]", "LcMode", "lfmanual")
+            content = modify_pp3_value(content, "[LensProfile]", "UseDistortion", "true")
+            content = modify_pp3_value(content, "[LensProfile]", "UseVignette", "true")
+            content = modify_pp3_value(content, "[LensProfile]", "UseCA", "true")
+            content = modify_pp3_value(content, "[LensProfile]", "LFCameraMake", "Sony")
+            content = modify_pp3_value(content, "[LensProfile]", "LFCameraModel", camera_model)
+            content = modify_pp3_value(content, "[LensProfile]", "LFLens", selected_lens_str)
+            applied["lens_profile_applied"] = selected_lens_str
+            applied["lens_camera_model"] = camera_model
     else:
         content = modify_pp3_value(content, "[LensProfile]", "LcMode", "lfauto")
         applied["lens_profile_applied"] = "lfauto"

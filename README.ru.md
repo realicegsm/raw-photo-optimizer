@@ -72,7 +72,8 @@ raw-photo-optimizer/
 │       │   └── process_raw.py
 │       └── templates/
 │           ├── OpenClaw_a6100_Adobe.pp3
-│           └── Sony ILCE-6100A Adobe Standard.dcp
+│           ├── Sony ILCE-6100A Adobe Standard.dcp
+│           └── TTARTISAN AF 50mm F1.8 Neo.lcp
 └── .
 ```
 
@@ -122,7 +123,7 @@ python3 scripts/process_raw.py /path/to/raw /path/to/output --keep --log
 ```bash
 python3 scripts/process_raw.py /path/to/raw /path/to/output -BW       # микшер каналов
 python3 scripts/process_raw.py /path/to/raw /path/to/output --BW_AVG  # усреднённое обесцвечивание
-python3 scripts/process_raw.py /path/to/raw /path/to/output --BW_LAB  # через Lab Adjustments
+python3 scripts/process_raw.py /path/to/raw /path/to/output --BW_LAB  # через коррекцию цветности Luminance Curve
 ```
 
 Для отдельного анализа одного файла:
@@ -170,7 +171,8 @@ release/raw-photo-optimizer/
 │   └── process_raw.py
 └── templates/
     ├── OpenClaw_a6100_Adobe.pp3
-    └── Sony ILCE-6100A Adobe Standard.dcp
+    ├── Sony ILCE-6100A Adobe Standard.dcp
+    └── TTARTISAN AF 50mm F1.8 Neo.lcp
 ```
 
 Эта структура предназначена для публикации skill-пакета без локальных мусорных файлов, временных выходов и артефактов разработки.
