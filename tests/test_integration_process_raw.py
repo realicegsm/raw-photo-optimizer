@@ -1,4 +1,5 @@
 import csv
+import json
 import math
 import os
 import shutil
@@ -227,6 +228,51 @@ def test_process_raw_adds_bw_suffix_for_bw_modes(
     )
 
     assert Path(result["output_file"]).name == expected_filename
+
+
+def test_process_raw_lab_mode_is_preserved_by_rawtherapee(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    rawtherapee_cli = resolve_rawtherapee_cli()
+    monkeypatch.setattr(process_raw_module, "RAWTHERAPEE_BIN", str(rawtherapee_cli))
+
+    input_dir = tmp_path / "raw"
+    input_dir.mkdir()
+    input_raw = input_dir / "BWLabIntegration.ARW"
+    shutil.copy2(RAW_DIR / "DSC05456.ARW", input_raw)
+
+    report = process_raw_module.process_raw(
+        input_raw,
+        tmp_path / "output",
+        keep=True,
+        bw_mode="lab",
+    )
+
+    assert report["status"] == "OK", report["reason"]
+    output_file = Path(report["output_file"])
+    output_profile = Path(report["output_profile"])
+    assert output_file.name == "BWLabIntegration_BW_LAB.jpg"
+    assert output_file.is_file() and output_file.stat().st_size > 0
+    assert output_profile.is_file() and output_profile.stat().st_size > 0
+
+    assert read_section_values(output_profile, "Black & White")["Enabled"] == "false"
+    luminance_curve = read_section_values(output_profile, "Luminance Curve")
+    assert luminance_curve["Enabled"] == "true"
+    assert math.isclose(float(luminance_curve["Chromaticity"]), -100.0)
+    assert report["black_and_white_mode"] == "--BW_LAB"
+    assert json.loads(report["black_and_white_parameters"]) == {
+        "Black & White": {"Enabled": "false"},
+        "Luminance Curve": {"Chromaticity": "-100", "Enabled": "true"},
+    }
+
+    report_path = tmp_path / "report.csv"
+    process_raw_module.write_report(report_path, [report])
+    with report_path.open("r", encoding="utf-8", newline="") as report_file:
+        logged_report = next(csv.DictReader(report_file))
+    assert logged_report["black_and_white_mode"] == "--BW_LAB"
+    assert json.loads(logged_report["black_and_white_parameters"]) == json.loads(
+        report["black_and_white_parameters"]
+    )
 
 
 def test_process_raw_with_real_rawtherapee(tmp_path: Path) -> None:

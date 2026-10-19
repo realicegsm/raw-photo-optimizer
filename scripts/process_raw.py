@@ -4,6 +4,7 @@ import os
 import shutil
 import argparse
 import csv
+import json
 from pathlib import Path
 from datetime import datetime
 from concurrent.futures import ProcessPoolExecutor, as_completed
@@ -81,6 +82,8 @@ def optimize_profile(
         "drc_anchor": 0,
         "lens_profile_applied": "",
         "lens_camera_model": "",
+        "black_and_white_mode": "",
+        "black_and_white_parameters": "{}",
     }
 
     if estimated_shift_ev is not None:
@@ -202,6 +205,22 @@ def optimize_profile(
     # derived guess that can drift out of sync (previous version always
     # logged 0/0 here).
     applied = optimize_pp3(base_profile, out_profile, params)
+    mode_flags = {
+        "channel_mixer": "-BW",
+        "desaturation": "--BW_AVG",
+        "lab": "--BW_LAB",
+    }
+    decision_values["black_and_white_mode"] = (
+        mode_flags[applied["black_and_white_mode"]]
+        if applied["black_and_white_mode"]
+        else ""
+    )
+    decision_values["black_and_white_parameters"] = json.dumps(
+        applied["black_and_white_parameters"],
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    )
 
     if applied["contrast"] > 0:
         decision_values["exposure_contrast"] = applied["contrast"]
@@ -286,6 +305,8 @@ def process_raw(file_path, output_dir, keep=False, bw_mode: str | None = None):
         "drc_anchor": "",
         "lens_profile_applied": "",
         "lens_camera_model": "",
+        "black_and_white_mode": "",
+        "black_and_white_parameters": "{}",
     }
     
     analysis = analyze_file(file_path)
@@ -399,6 +420,7 @@ def write_report(report_path, rows):
         "denoise_chroma", "denoise_ldetail", "denoise_median", "denoise_reason",
         "shadow_lift_amount", "shadow_highlights_amount", "headroom_ratio",
         "drc_anchor", "lens_profile_applied", "lens_camera_model",
+        "black_and_white_mode", "black_and_white_parameters",
         "decisions_summary", "file", "output_file", "output_profile",
         "profile",
     ]

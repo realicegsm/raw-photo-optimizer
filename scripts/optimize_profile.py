@@ -321,6 +321,8 @@ def optimize_pp3(base_pp3_path, output_pp3_path, params):
         "drc_anchor": 0,
         "lens_profile_applied": "none",
         "lens_camera_model": "",
+        "black_and_white_mode": None,
+        "black_and_white_parameters": {},
     }
 
     with open(base_pp3_path, 'r', encoding='utf-8') as f:
@@ -346,6 +348,10 @@ def optimize_pp3(base_pp3_path, output_pp3_path, params):
     if bw_mode not in (None, "channel_mixer", "desaturation", "lab"):
         raise ValueError(f"Unsupported black-and-white mode: {bw_mode}")
 
+    bw_parameters = {
+        "Black & White": {"Enabled": "false"},
+        "Luminance Curve": {"Enabled": "false"},
+    }
     if bw_mode in ("channel_mixer", "desaturation"):
         bw_values = {
             "Enabled": "true",
@@ -374,12 +380,22 @@ def optimize_pp3(base_pp3_path, output_pp3_path, params):
         }
         for key, value in bw_values.items():
             content = modify_pp3_value(content, "[Black & White]", key, value)
+        bw_parameters["Black & White"] = bw_values
     else:
         content = modify_pp3_value(content, "[Black & White]", "Enabled", "false")
 
     if bw_mode == "lab":
-        content = modify_pp3_value(content, "[Lab Adjustments]", "Enabled", "true")
-        content = modify_pp3_value(content, "[Lab Adjustments]", "Chromaticity", "-100")
+        content = modify_pp3_value(content, "[Luminance Curve]", "Enabled", "true")
+        content = modify_pp3_value(content, "[Luminance Curve]", "Chromaticity", "-100")
+        bw_parameters["Luminance Curve"] = {
+            "Enabled": "true",
+            "Chromaticity": "-100",
+        }
+    else:
+        content = modify_pp3_value(content, "[Luminance Curve]", "Enabled", "false")
+
+    applied["black_and_white_mode"] = bw_mode
+    applied["black_and_white_parameters"] = bw_parameters
 
     content = modify_pp3_value(content, "[FattalToneMapping]", "Enabled", "true" if float(drc_val) > 0 else "false")
     content = modify_pp3_value(content, "[FattalToneMapping]", "Amount", str(drc_val))
