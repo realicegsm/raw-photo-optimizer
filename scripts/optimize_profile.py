@@ -232,6 +232,12 @@ def determine_lens_profile(
         if not value or not profile_name:
             return False
 
+        import re
+        lens_focal_lengths = set(re.findall(r"\b(\d+(?:\.\d+)?)\s*mm\b", value, re.IGNORECASE))
+        profile_focal_lengths = set(re.findall(r"\b(\d+(?:\.\d+)?)\s*mm\b", profile_name, re.IGNORECASE))
+        if lens_focal_lengths and profile_focal_lengths and lens_focal_lengths.isdisjoint(profile_focal_lengths):
+            return False
+
         lens_norm = normalize_text(value)
         profile_norm = normalize_text(profile_name)
 

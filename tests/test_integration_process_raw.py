@@ -5,6 +5,7 @@ import os
 import shutil
 import subprocess
 import sys
+from collections.abc import Mapping
 from pathlib import Path
 
 import pytest
@@ -17,6 +18,12 @@ OUTPUT_DIR = ROOT / "examples" / "sample_output"
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import process_raw as process_raw_module
+
+
+def report_string(report: Mapping[str, object], key: str) -> str:
+    value = report[key]
+    assert isinstance(value, str), f"Expected report field {key!r} to be a string"
+    return value
 
 
 def resolve_rawtherapee_cli() -> Path:
@@ -227,7 +234,7 @@ def test_process_raw_adds_bw_suffix_for_bw_modes(
         input_raw, tmp_path / "output", bw_mode=bw_mode
     )
 
-    assert Path(result["output_file"]).name == expected_filename
+    assert Path(report_string(result, "output_file")).name == expected_filename
 
 
 def test_process_raw_lab_mode_is_preserved_by_rawtherapee(
@@ -249,8 +256,8 @@ def test_process_raw_lab_mode_is_preserved_by_rawtherapee(
     )
 
     assert report["status"] == "OK", report["reason"]
-    output_file = Path(report["output_file"])
-    output_profile = Path(report["output_profile"])
+    output_file = Path(report_string(report, "output_file"))
+    output_profile = Path(report_string(report, "output_profile"))
     assert output_file.name == "BWLabIntegration_BW_LAB.jpg"
     assert output_file.is_file() and output_file.stat().st_size > 0
     assert output_profile.is_file() and output_profile.stat().st_size > 0
@@ -260,7 +267,7 @@ def test_process_raw_lab_mode_is_preserved_by_rawtherapee(
     assert luminance_curve["Enabled"] == "true"
     assert math.isclose(float(luminance_curve["Chromaticity"]), -100.0)
     assert report["black_and_white_mode"] == "--BW_LAB"
-    assert json.loads(report["black_and_white_parameters"]) == {
+    assert json.loads(report_string(report, "black_and_white_parameters")) == {
         "Black & White": {"Enabled": "false"},
         "Luminance Curve": {"Chromaticity": "-100", "Enabled": "true"},
     }
@@ -270,8 +277,8 @@ def test_process_raw_lab_mode_is_preserved_by_rawtherapee(
     with report_path.open("r", encoding="utf-8", newline="") as report_file:
         logged_report = next(csv.DictReader(report_file))
     assert logged_report["black_and_white_mode"] == "--BW_LAB"
-    assert json.loads(logged_report["black_and_white_parameters"]) == json.loads(
-        report["black_and_white_parameters"]
+    assert json.loads(report_string(logged_report, "black_and_white_parameters")) == json.loads(
+        report_string(report, "black_and_white_parameters")
     )
 
 

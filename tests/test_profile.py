@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from optimize_profile import optimize_pp3
+from optimize_profile import determine_lens_profile, optimize_pp3
 from process_raw import optimize_profile
 
 
@@ -87,6 +87,17 @@ def test_lcp_profile_generation_matches_rawtherapee_sidecar(tmp_path):
         "LFLens": "TTARTISAN AF 50mm F1.8 Neo",
     }
     assert_generated_profile_matches_rt_output(input_profile, output_profile, expected_lens_profile)
+
+
+def test_ttartisan_lcp_profiles_match_distinct_focal_lengths():
+    templates_dir = ROOT / "templates"
+
+    assert determine_lens_profile("TTARTISAN 35mm F1.8 ", templates_dir) == (
+        templates_dir / "TTARTISAN AF 35mm F1.8.lcp"
+    )
+    assert determine_lens_profile("TTARTISAN 50mm F1.8 ", templates_dir) == (
+        templates_dir / LCP_NAME
+    )
 
 
 def test_manual_lens_profile_generation_matches_rawtherapee_sidecar(tmp_path):
