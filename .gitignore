@@ -5,6 +5,7 @@ __pycache__/
 *.log
 /test-output/
 /.vscode/
+/examples/sample_raw/
 /examples/sample_output/
 /release/*.zip
 /release/**/.DS_Store
