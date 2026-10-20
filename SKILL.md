@@ -76,7 +76,7 @@ The scripts are NOT standalone executables. They MUST be executed via the Python
   - the *applied* profile as `<output>.pp3` next to the output JPG, copied by RawTherapee itself (`-O`) — includes RawTherapee's own defaults for unset keys. Diffing the two reveals parameters silently ignored after RawTherapee renames sections or keys.
 
 ## 🧾 CSV Report (`--log`)
-One row per file: raw statistics (`dynamic_range_ev`, `mean_green`, `headroom_ratio`, `percentile_low_0_1`…), every applied value (`exposure_compensation_ev`, `drc_amount`, `drc_anchor`, `drc_dampened`, `exposure_contrast`, `denoise_*`, `shadow_lift_*`, `lens_profile_applied`…), the selected black-and-white option (`black_and_white_mode`) and its PP3 settings as JSON (`black_and_white_parameters`), a human-readable `decisions_summary` and output paths. Profile settings in the report match the values written to the generated profile.
+One row per file: raw statistics (`dynamic_range_ev`, `mean_green`, `headroom_ratio`, `percentile_low_0_1`…), every applied value (`exposure_compensation_ev`, `drc_amount`, `drc_anchor`, `drc_dampened`, `exposure_contrast`, `denoise_*`, `shadow_lift_*`, `lens_profile_applied`…), the selected black-and-white option (`black_and_white_mode`) and its PP3 settings as JSON (`black_and_white_parameters`) when a black-and-white mode is active, a human-readable `decisions_summary` and output paths. Profile settings in the report match the values written to the generated profile.
 
 ## ⚠️ Known Limitations
 - Calibrated for one sensor (A6100) and two lenses; thresholds come from a small manually-graded sample.

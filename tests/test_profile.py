@@ -6,6 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from optimize_profile import optimize_pp3
+from process_raw import optimize_profile
 
 
 TEMPLATE_PROFILE = ROOT / "templates" / "OpenClaw_a6100_Adobe.pp3"
@@ -232,3 +233,18 @@ def test_black_and_white_modes_write_expected_profile_settings(tmp_path):
     optimize_pp3(TEMPLATE_PROFILE, color_profile, params)
     assert read_section_values(color_profile, "Black & White")["Enabled"] == "false"
     assert read_section_values(color_profile, "Luminance Curve")["Enabled"] == "false"
+
+
+def test_color_mode_omits_black_and_white_parameters_from_report(tmp_path):
+    _, _, decision_values = optimize_profile(
+        tmp_path / "color.ARW",
+        "color",
+        {},
+        "ILCE-6100",
+        "",
+        100,
+        keep=True,
+    )
+
+    assert decision_values["black_and_white_mode"] == ""
+    assert decision_values["black_and_white_parameters"] == ""

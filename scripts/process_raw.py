@@ -83,7 +83,7 @@ def optimize_profile(
         "lens_profile_applied": "",
         "lens_camera_model": "",
         "black_and_white_mode": "",
-        "black_and_white_parameters": "{}",
+        "black_and_white_parameters": "",
     }
 
     if estimated_shift_ev is not None:
@@ -210,17 +210,14 @@ def optimize_profile(
         "desaturation": "--BW_AVG",
         "lab": "--BW_LAB",
     }
-    decision_values["black_and_white_mode"] = (
-        mode_flags[applied["black_and_white_mode"]]
-        if applied["black_and_white_mode"]
-        else ""
-    )
-    decision_values["black_and_white_parameters"] = json.dumps(
-        applied["black_and_white_parameters"],
-        ensure_ascii=False,
-        sort_keys=True,
-        separators=(",", ":"),
-    )
+    if applied["black_and_white_mode"]:
+        decision_values["black_and_white_mode"] = mode_flags[applied["black_and_white_mode"]]
+        decision_values["black_and_white_parameters"] = json.dumps(
+            applied["black_and_white_parameters"],
+            ensure_ascii=False,
+            sort_keys=True,
+            separators=(",", ":"),
+        )
 
     if applied["contrast"] > 0:
         decision_values["exposure_contrast"] = applied["contrast"]
@@ -306,7 +303,7 @@ def process_raw(file_path, output_dir, keep=False, bw_mode: str | None = None):
         "lens_profile_applied": "",
         "lens_camera_model": "",
         "black_and_white_mode": "",
-        "black_and_white_parameters": "{}",
+        "black_and_white_parameters": "",
     }
     
     analysis = analyze_file(file_path)
