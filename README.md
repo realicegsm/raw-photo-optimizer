@@ -112,6 +112,12 @@ Process a full RAW directory:
 python3 scripts/process_raw.py /path/to/raw /path/to/output
 ```
 
+Process a single RAW file:
+
+```bash
+python3 scripts/process_raw.py /path/to/raw/DSC01900.ARW /path/to/output
+```
+
 Save the generated `.pp3` file and write a CSV report:
 
 ```bash

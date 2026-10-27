@@ -5,6 +5,7 @@ import os
 import shutil
 import subprocess
 import sys
+from concurrent.futures import Future
 from collections.abc import Mapping
 from pathlib import Path
 
@@ -18,6 +19,44 @@ OUTPUT_DIR = ROOT / "examples" / "sample_output"
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import process_raw as process_raw_module
+
+
+def test_main_processes_single_input_file(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    input_raw = tmp_path / "single.ARW"
+    input_raw.touch()
+    output_dir = tmp_path / "output"
+    processed_files: list[Path] = []
+
+    def fake_process_raw(file_path, _output_dir, **_kwargs):
+        processed_files.append(Path(file_path))
+        return {"file_id": Path(file_path).stem, "status": "OK"}
+
+    class ImmediateExecutor:
+        def __init__(self, **_kwargs) -> None:
+            pass
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *_args) -> None:
+            pass
+
+        def submit(self, function, *args, **kwargs):
+            future = Future()
+            future.set_result(function(*args, **kwargs))
+            return future
+
+    monkeypatch.setattr(process_raw_module, "process_raw", fake_process_raw)
+    monkeypatch.setattr(process_raw_module, "ProcessPoolExecutor", ImmediateExecutor)
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        ["process_raw.py", str(input_raw), str(output_dir)],
+    )
+
+    process_raw_module.main()
+
+    assert processed_files == [input_raw]
 
 
 def report_string(report: Mapping[str, object], key: str) -> str:

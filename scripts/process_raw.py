@@ -428,7 +428,7 @@ def write_report(report_path, rows):
 
 def main():
     parser = argparse.ArgumentParser(description="Raw Photo Optimizer Pipeline")
-    parser.add_argument("input_dir", nargs="?", default=DEFAULT_RAW_DIR, help="Input directory with .ARW files")
+    parser.add_argument("input_dir", nargs="?", default=DEFAULT_RAW_DIR, help="Input directory with .ARW files or a single RAW file")
     parser.add_argument("output_dir", nargs="?", default=DEFAULT_OUTPUT_DIR, help="Output directory for JPGs")
     parser.add_argument("--keep", action="store_true", help="Keep generated .pp3 profiles in the input directory")
     parser.add_argument("--log", action="store_true", help="Write a CSV processing report to the output directory")
@@ -470,11 +470,14 @@ def main():
     print(f"⚫ Black & White: {bw_mode or 'No'}")
     
     raw_path = Path(raw_dir)
-    if not raw_path.exists() or not raw_path.is_dir():
-        print(f"❌ Error: Input directory {raw_dir} does not exist.")
+    if raw_path.is_file():
+        raw_files = [raw_path]
+    elif raw_path.is_dir():
+        raw_files = sorted([f for f in raw_path.glob("*.ARW") if not f.name.startswith('.')])
+    else:
+        print(f"❌ Error: Input path {raw_dir} does not exist or is not a file or directory.")
         sys.exit(1)
 
-    raw_files = sorted([f for f in raw_path.glob("*.ARW") if not f.name.startswith('.')])
     if not raw_files:
         print("No ARW files found.")
         return

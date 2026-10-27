@@ -112,6 +112,12 @@ pip install numpy rawpy
 python3 scripts/process_raw.py /path/to/raw /path/to/output
 ```
 
+Обработка одного RAW-файла:
+
+```bash
+python3 scripts/process_raw.py /path/to/raw/DSC01900.ARW /path/to/output
+```
+
 С сохранением `.pp3` рядом с файлом и CSV-отчётом:
 
 ```bash

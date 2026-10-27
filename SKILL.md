@@ -51,6 +51,9 @@ The scripts are NOT standalone executables. They MUST be executed via the Python
 2. **Command Execution**:
    `python3 scripts/process_raw.py [input_dir] [output_dir]`
 
+   Process one RAW file:
+   `python3 scripts/process_raw.py /path/to/file.ARW [output_dir]`
+
    Preserve generated profiles for analysis:
    `python3 scripts/process_raw.py [input_dir] [output_dir] --keep`
 
